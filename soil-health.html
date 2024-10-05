@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soil Health - SDG 2</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Link to jQuery -->
+</head>
+<body>
+    <header>
+        <div class="banner">Soil Health - SDG 2</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="educational-materials.html">Educational Materials</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-section">
+            <img src="img/soil.jpg" alt="Weather and Climate Image" style="width:8%; margin: top 0px; border-radius:8px; float:right;">
+            <h1>Soil Health and Its Impact</h1>
+            <p>Soil health is the foundation of sustainable agriculture, and its quality directly influences global food security, economic stability, and environmental resilience. Healthy soils support nutrient-rich crops, mitigate the effects of climate change, and help protect ecosystems.</p>
+        </section>
+
+        <section class="page-section">
+            <h2>Factors Threatening Soil Quality</h2>
+            <img src="img/poison.jpg" alt="Weather Patterns" style="width:17%; margin-top:5px; border-radius:8px; float:right;">
+            <p>Soil quality might be degraded by several factors, such as:</p>
+            <ul>
+                <li><strong>Soil degradation:</strong> Over-reliance on nitrogen fertilizers disrupts the balance of soil microbiota, which are essential for maintaining soil fertility.</li>
+                <li><strong>Water pollution:</strong> Only a fraction of the nitrogen fertilizers applied to fields is absorbed by plants.</li>
+                <li><strong>Greenhouse gas emissions:</strong> Nitrogen fertilizers contribute to the release of nitrous oxide (N₂O), a potent greenhouse gas that exacerbates global climate change.</li>
+                <li><strong>Soil acidification:</strong> Excess nitrogen application alters soil pH, leading to acidification.</li>
+            </ul>
+        </section>
+
+        <section class="page-section">
+            <h2>Impact on Global Populations and Food Security</h2>
+            <img src="img/wither.jpg" alt="Extreme Weather Events" style="width:14%; margin-top:5px; border-radius:8px; float:right;">
+            <p>Several places are already suffering because of soil quality degradation. Some key impacts include:</p>
+            <ul>
+                <li><strong>Lower crop yields:</strong> Degraded soils are less capable of retaining water and nutrients, leading to reduced crop productivity.</li>
+                <li><strong>Economic instability:</strong> Soil degradation not only affects farmers' livelihoods but also places a burden on entire economies.</li>
+                <li><strong>Rural poverty:</strong> Communities dependent on agriculture face heightened vulnerability when soil health declines.</li>
+                <li><strong>Human health risks:</strong> Poor soil health and water pollution, caused by excessive nitrogen use, contribute to various health problems.</li>
+            </ul>
+        </section>
+
+        <section class="page-section">
+            <h2>Solutions to Address Soil Degradation</h2>
+            <img src="img/farmer.jpg" alt="Extreme Weather Events" style="width:17%; margin-top:5px; border-radius:8px; float:right;">
+            <p>It is critical to adopt sustainable agricultural practices that protect and restore soils. Some of ways that achieve that are as follow:</p>
+            <ul>
+                <li><strong>Sustainable farming practices:</strong> Reducing the reliance on synthetic fertilizers and adopting organic farming, crop rotation, and agroforestry can enhance soil health.</li>
+                <li><strong>Empowering small-scale farmers:</strong> SDG 2 calls for empowering small farmers through education and access to sustainable technologies.</li>
+                <li><strong>Earth observation (EO) technology:</strong> The integration of EO technology offers valuable insights into soil conditions.</li>
+                <li><strong>Reducing nitrogen use:</strong> Governments and agricultural industries need to work together to reduce the use of nitrogen fertilizers by promoting precision agriculture.</li>
+            </ul>
+        </section>
+
+        <section class="page-section">
+            <h2>Interactive Quiz</h2>
+            <p>Test your knowledge about soil health and how to preserve it!</p>
+            <button id="start-quiz-btn">Start Quiz</button>
+            <div id="quiz" style="display: none;">
+                <div id="timer" style="font-weight: bold;">Time left: <span id="time">60</span> seconds</div>
+                <div class="quiz">
+                    <p><strong>1. What is one of the main threats to soil health?</strong></p>
+                    <ul>
+                        <li><input type="radio" name="q1" value="a"> Overuse of synthetic nitrogen fertilizers</li>
+                        <li><input type="radio" name="q1" value="b"> Organic farming</li>
+                        <li><input type="radio" name="q1" value="c"> Agroforestry</li>
+                    </ul>
+
+                    <p><strong>2. What environmental problem is caused by nitrogen fertilizer runoff?</strong></p>
+                    <ul>
+                        <li><input type="radio" name="q2" value="a"> Soil acidification</li>
+                        <li><input type="radio" name="q2" value="b"> Water pollution and toxic algal blooms</li>
+                        <li><input type="radio" name="q2" value="c"> Deforestation</li>
+                    </ul>
+
+                    <p><strong>3. What is a key consequence of soil degradation on global food security?</strong></p>
+                    <ul>
+                        <li><input type="radio" name="q3" value="a"> Increased biodiversity</li>
+                        <li><input type="radio" name="q3" value="b"> Lower crop yields</li>
+                        <li><input type="radio" name="q3" value="c"> Expansion of farmland</li>
+                    </ul>
+
+                    <p><strong>4. Which Sustainable Development Goal (SDG) focuses on ending hunger and promoting sustainable agriculture?</strong></p>
+                    <ul>
+                        <li><input type="radio" name="q4" value="a"> Solar Energy</li>
+                        <li><input type="radio" name="q4" value="b"> Natural Gas</li>
+                        <li><input type="radio" name="q4" value="c"> Coal</li>
+                    </ul>
+
+                    <button id="submit-quiz-btn" onclick="checkAnswers()" disabled>Submit Quiz</button>
+                    <p id="quiz-result" style="margin-top: 10px; font-weight: bold;"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Collapsible Teacher's Lesson Plan Section -->
+        <h2 class="toggle-header">Teacher's Lesson Plan (Click to View)</h2>
+        <div id="lesson-plan" style="display:none;">
+            <h3>Lesson Plan: Weather and Climate in the Context of Climate Action</h3>
+            <p><strong>Grade Level:</strong> High School (Grades 9-12)</p>
+            <p><strong>Duration:</strong> 5 Class Periods (45-60 minutes each)</p>
+
+            <h3>Objectives:</h3>
+            <ul>
+                <li>Understand the relationship between weather, climate, and climate change.</li>
+                <li>Analyze the impact of climate change on weather patterns and extreme weather events.</li>
+                <li>Explore NASA data sources and tools to study weather and climate.</li>
+                <li>Develop a community action plan to address local climate change issues.</li>
+            </ul>
+
+            <h3>Materials Needed:</h3>
+            <ul>
+                <li>Computers or tablets with internet access</li>
+                <li>Access to NASA's <a href="https://earthdata.nasa.gov/" target="_blank">Earth Observing System Data and Information System (EOSDIS)</a></li>
+                <li>Weather tracking tools (anemometer, thermometer, rain gauge)</li>
+            </ul>
+
+            <h3>Lesson Outline:</h3>
+            <h4>Day 1: Introduction to Weather and Climate</h4>
+            <ul>
+                <li>Warm-Up Discussion: Differences between weather and climate.</li>
+                <li>Video Presentation: Introduction to climate change.</li>
+                <li>Homework Assignment: Research local weather patterns.</li>
+            </ul>
+
+            <h4>Day 2: Analyzing Weather Data</h4>
+            <ul>
+                <li>Hands-on activity collecting local weather data.</li>
+                <li>Discussion on how local weather relates to global climate change.</li>
+            </ul>
+
+            <h4>Day 3: Exploring Climate Change Impact</h4>
+            <ul>
+                <li>Group presentations on climate change impacts in different regions.</li>
+                <li>Discuss potential solutions for mitigating these impacts.</li>
+            </ul>
+
+            <h4>Day 4-5: Project Work</h4>
+            <ul>
+                <li>Use NASA tools to analyze datasets like land surface temperature (MODIS) and rainfall (GPM).</li>
+                <li>Create a climate action plan based on data findings.</li>
+            </ul>
+
+            <h3>Assessment:</h3>
+            <ul>
+                <li>Participation in activities and presentations.</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Global Warming and Climate Change - Educational Materials. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        let timer;
+        let timeLeft = 60; // 1 minute
+        const startQuizBtn = document.getElementById('start-quiz-btn');
+        const quizSection = document.getElementById('quiz');
+        const submitQuizBtn = document.getElementById('submit-quiz-btn');
+        const timeDisplay = document.getElementById('time');
+
+        startQuizBtn.addEventListener('click', function() {
+            quizSection.style.display = 'block';
+            startQuizBtn.disabled = true; // Disable the start button
+            startTimer();
+            submitQuizBtn.disabled = false; // Enable the submit button
+        });
+
+        function startTimer() {
+            timer = setInterval(function() {
+                if (timeLeft > 0) {
+                    timeLeft--;
+                    timeDisplay.textContent = timeLeft;
+                } else {
+                    clearInterval(timer);
+                    submitQuizBtn.disabled = true; // Disable submit button when time's up
+                    document.querySelectorAll('input[type="radio"]').forEach(input => {
+                        input.disabled = true; // Disable all radio buttons
+                    });
+                    showCorrectAnswers();
+                }
+            }, 1000);
+        }
+
+        function checkAnswers() {
+            clearInterval(timer); // Stop the timer when submitting
+            let score = 0;
+            const totalQuestions = 4;
+
+            const answers = {
+                q1: 'a',
+                q2: 'b',
+                q3: 'b',
+                q4: 'b',
+            };
+
+            for (let i = 1; i <= totalQuestions; i++) {
+                const selected = document.querySelector(`input[name="q${i}"]:checked`);
+                const correctAnswer = answers[`q${i}`];
+
+                if (selected) {
+                    if (selected.value === correctAnswer) {
+                        score++;
+                        selected.parentNode.style.color = "green";
+                        selected.parentNode.appendChild(document.createTextNode(" (Correct)"));
+                    } else {
+                        selected.parentNode.style.color = "red";
+                        selected.parentNode.appendChild(document.createTextNode(` (Incorrect. The correct anwser is: ${correctAnswer})`));
+                    }
+                } else {
+                    // Mark unanswered questions as incorrect and show the correct answer
+                    const correctInput = document.querySelector(`input[name="q${i}"][value="${correctAnswer}"]`);
+                    if (correctInput) {
+                        correctInput.parentNode.style.color = "red"; // Mark the correct answer in red
+                        correctInput.parentNode.appendChild(document.createTextNode(` (This is the correct answser)`));
+                    }
+                }
+            }
+
+            const resultMessage = `You scored ${score} out of ${totalQuestions}.`;
+            document.getElementById('quiz-result').textContent = resultMessage;
+            submitQuizBtn.disabled = true; // Disable submit button after submission
+        }
+
+        function showCorrectAnswers() {
+            const answers = {
+                q1: 'a',
+                q2: 'b',
+                q3: 'b',
+                q4: 'b',
+            };
+
+            for (let i = 1; i <= 5; i++) {
+                const correctAnswer = answers[`q${i}`];
+                const correctInput = document.querySelector(`input[name="q${i}"][value="${correctAnswer}"]`);
+                if (correctInput) {
+                    correctInput.parentNode.style.color = "red"; // Correct answer in red
+                    correctInput.parentNode.appendChild(document.createTextNode(` (This is the correct answser)`));
+                }
+            }
+        }
+    </script>
+</body>
+</html>
