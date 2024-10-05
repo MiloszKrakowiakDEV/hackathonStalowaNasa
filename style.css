@@ -1,226 +1,193 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Font Settings */
 body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            transition: all 0.5s ease; /* Smooth transition for podium */
-        }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: Arial, sans-serif;
-            overflow-x: hidden;
-            background-color: #f4f4f4;
-        }
-        
-        /* Header */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: #007BFF;
-            color: white;
-            text-align: center;
-            z-index: 1000;
-            
-        }
-        
-        .banner {
-            font-size: 2em;
-            padding: 20px;
-        }
-        
-        /* Navigation */
-        nav ul {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            background-color: #0056b3;
-            padding: 10px;
-            
-        }
-        
-        nav ul li {
-            margin: 0 15px;
-        }
-        
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.2em;
-        }
-        
-        main {
-            margin-top: 150px; 
-            padding: 20px;
-        }
-
-        /* Main Board Game Area */
-        /* Main Board Game Area */
-.game-board {
-    border-radius: 15px;
-    width: 800px; /* Increase the width */
-    height: 400px; /* Increase the height */
-    border: 2px solid black;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    padding: 5px; /* Less padding */
-    background-color:slategray;
-    -webkit-user-select: none; /* Safari */        
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* IE10+/Edge */
-    user-select: none; /* Standard */
-    margin-top: 170px;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+    background-color: #f4f4f4;
+    line-height: 1.6; /* Improves readability */
 }
 
-
-.game-square {
-    width: 60px;  /* Increase the width of squares */
-    height: 60px; /* Increase the height of squares */
-    border: 1px solid #000;
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #007BFF; /* Blue Header */
+    color: white;
     text-align: center;
-    line-height: 60px; /* Center text vertically */
-    margin: 2px; /* Less margin */
-    position: relative;
-    overflow: hidden;
-    border-radius: 25px;
-    overflow:visible;
-    background: url('nasa_space.png'); /* Reddish question squares */
-    background-size: 100%; /* End color */
+    z-index: 1000;
+    padding: 15px 0;
 }
 
+.banner {
+    font-size: 2em;
+    font-weight: bold;
+}
 
-        /* Colors for squares */
-        .start-square {
-            background: url('nasa_start.png'); /* Reddish question squares */
-            background-size: 100%; /* End color */
-        }
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    background-color: #0056b3; /* Darker blue for nav */
+    padding: 10px;
+    margin-top: 10px; /* Space below banner */
+}
 
-        .end-square {
-            background: url('nasa_finish.png'); /* Reddish question squares */
-            background-size: 100%; /* End color */
-        }
+nav ul li {
+    margin: 0 20px;
+}
 
-        .question-square {
-            background: url('nasa_question.png'); /* Reddish question squares */
-            background-size: 100%;
-        }
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease; /* Transition for hover */
+}
 
-        .extra-roll-square {
-            background: url('nasa_dice.png'); /* Reddish question squares */
-            background-size: 100%; /* End color */
-        }
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #ffcc00; /* Gold color on hover */
+}
 
-        .player {
-            position: absolute;
-            width: 20px; /* Smaller player pieces */
-            height: 20px; /* Smaller player pieces */
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: black;  /* Text color for visibility */
-            font-size: 10px; /* Smaller text */
-            transition: transform 0.5s ease;  /* Animation for movement */
-        }
+/* Main Content */
+main {
+    margin-top: 150px; /* Ensure main content is below the fixed header */
+    padding: 20px;
+}
 
-        /* Player positioning inside squares */
-        .player1 { background-color: red; top: 0; left: 0; }
-        .player2 { background-color: blue; top: 0; right: 0; }
-        .player3 { background-color: green; bottom: 0; left: 0; }
-        .player4 { background-color: yellow; bottom: 0; right: 0; }
+/* Section Styling */
+.page-section {
+    margin: 20px auto; /* Space between sections */
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #ffffff; /* White background for sections */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s; /* Smooth transition on hover */
+}
 
-        /* Dice Area */
-        .dice-container {
-            margin-top: 20px;
-            text-align: center;
-        }
+.page-section:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
 
-        .dice {
-            -webkit-user-select: none; /* Safari */        
-            -moz-user-select: none; /* Firefox */
-            -ms-user-select: none; /* IE10+/Edge */
-             user-select: none; /* Standard */
-            width: 85px; /* Smaller dice */
-            height: 85px; /* Smaller dice */
-            font-size: 40px; /* Smaller font */
-            line-height: 80px;
-            text-align: center;
-            background-color: #fff;
-            border: 2px solid #000;
-            margin: 20px auto;
-        }
+h1, h2 {
+    color: #333;
+    margin: 10px 0; /* Reduced margin */
+}
 
-        .roll-btn {
-            -webkit-user-select: none; /* Safari */        
-            -moz-user-select: none; /* Firefox */
-            -ms-user-select: none; /* IE10+/Edge */
-            user-select: none; /* Standard */
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-        }
+h2 {
+    border-bottom: 2px solid #007BFF; /* Underline for subheadings */
+    padding-bottom: 5px;
+}
 
-        .roll-btn, .dice{
-            position: relative;
-            left: 500px;
-            bottom: 350px;
-        }
+p {
+    font-size: 1.1em;
+    color: #555; /* Slightly gray text for better contrast */
+}
 
-        .roll-btn:disabled {
-            background-color: #ccc; /* Gray out the button when disabled */
-            cursor: not-allowed; /* Change cursor to not-allowed */
-        }
+/* List Styles */
+ul {
+    list-style-type: none; /* Remove default bullet points */
+    padding-left: 0;
+}
 
-        /* Footer Placeholder */
-        footer {
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            margin-top: 20px;
-            width: 100%;
-        }
+ul li {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
 
-        /* Podium Styles */
-        .podium {
-            display: none; /* Hide by default */
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh; /* Full height for podium */
-            background-color: #fff;
-            color: #333;
-            text-align: center;
-            position: relative;
-        }
+ul li a {
+    color: #007BFF; /* Blue links */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s; /* Transition for hover */
+}
 
-        .podium h2 {
-            font-size: 36px;
-            margin: 20px 0;
-        }
+ul li a:hover {
+    color: #ffcc00; /* Gold color on hover */
+}
 
-        .podium .winner {
-            font-size: 28px;
-            font-weight: bold;
-        }
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #007BFF; /* Blue footer */
+    color: white;
+    position: relative; /* Adjusts position to allow for footer to sit below content */
+}
 
-        .podium .nearest {
-            font-size: 22px;
-            margin: 5px 0;
-        }
-        #currentTurn{
-            border: black solid 1px;
-            background-color: slategray;
-            margin: 15px;
-            padding: 3px;
-            color: white;
-            font: 25px;
-        }
+/* Quiz Styles */
+.quiz {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.quiz p {
+    font-size: 1.2em;
+    margin: 10px 0; /* Added margin for better spacing */
+}
+
+.quiz ul {
+    padding-left: 20px; /* Added padding for better alignment */
+}
+
+.quiz button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transition for hover */
+}
+
+.quiz button:hover {
+    background-color: #0056b3;
+}
+
+#quiz-result {
+    font-size: 1.2em;
+    margin-top: 10px;
+    color: #333; /* Changed to dark gray for better readability */
+}
+
+/* Timer Styles */
+#timer {
+    font-size: 1.5em;
+    color: red;
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .banner {
+        font-size: 1.5em;
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack navigation items on smaller screens */
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    h1, h2 {
+        font-size: 1.5em; /* Adjust font size on smaller screens */
+    }
+
+    .quiz button {
+        width: 100%; /* Full-width buttons on small screens */
+        font-size: 1.1em; /* Ensures button remains readable */
+    }
+}
