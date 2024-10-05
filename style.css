@@ -19,7 +19,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #007BFF; /* Blue Header */
+    background-color: #1B2B85; /* Blue Header */
     color: white;
     text-align: center;
     z-index: 1000;
@@ -35,7 +35,7 @@ nav ul {
     display: flex;
     justify-content: center;
     list-style: none;
-    background-color: #0056b3; /* Darker blue for nav */
+    background-color: #1B2B85; /* Darker blue for nav */
     padding: 10px;
     margin-top: 10px; /* Space below banner */
 }
@@ -82,7 +82,7 @@ h1, h2 {
 }
 
 h2 {
-    border-bottom: 2px solid #007BFF; /* Underline for subheadings */
+    border-bottom: 2px solid #1B2B85; /* Underline for subheadings */
     padding-bottom: 5px;
 }
 
@@ -103,7 +103,7 @@ ul li {
 }
 
 ul li a {
-    color: #007BFF; /* Blue links */
+    color: #1B2B85; /* Blue links */
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s; /* Transition for hover */
@@ -117,7 +117,7 @@ ul li a:hover {
 footer {
     text-align: center;
     padding: 15px 0;
-    background-color: #007BFF; /* Blue footer */
+    background-color: #1B2B85; /* Blue footer */
     color: white;
     position: relative; /* Adjusts position to allow for footer to sit below content */
 }
@@ -141,7 +141,7 @@ footer {
 }
 
 .quiz button {
-    background-color: #007BFF;
+    background-color: #1B2B85;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -152,7 +152,7 @@ footer {
 }
 
 .quiz button:hover {
-    background-color: #0056b3;
+    background-color: #1B2B85;
 }
 
 #quiz-result {

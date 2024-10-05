@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather and Climate - SDG 13</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Link to jQuery -->
+</head>
+<body>
+    <header>
+        <div class="banner">Weather and Climate - SDG 13</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="educational-materials.html">Educational Materials</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-section">
+            <h1>Weather and Climate</h1>
+            <p>Weather refers to the short-term atmospheric conditions in a specific area, while climate is the long-term average of weather patterns over extended periods. Understanding the difference between weather and climate is crucial in addressing the impacts of climate change, especially in the context of Sustainable Development Goal 13: Climate Action.</p>
+            <img src="images/weather-climate.jpg" alt="Weather and Climate Image" style="width:100%; margin-top:20px; border-radius:8px;">
+        </section>
+
+        <section class="page-section">
+            <h2>Understanding Weather Patterns</h2>
+            <p>Weather patterns are influenced by several factors, including:</p>
+            <ul>
+                <li><strong>Temperature:</strong> A measure of how hot or cold the atmosphere is.</li>
+                <li><strong>Humidity:</strong> The amount of moisture in the air, affecting cloud formation and precipitation.</li>
+                <li><strong>Wind:</strong> Air movement that can transport heat and moisture across regions.</li>
+                <li><strong>Precipitation:</strong> Any form of water, liquid or solid, that falls from clouds, impacting water availability and agriculture.</li>
+            </ul>
+            <img src="images/weather-patterns.jpg" alt="Weather Patterns" style="width:100%; margin-top:20px; border-radius:8px;">
+        </section>
+
+        <section class="page-section">
+            <h2>Climate Change and Weather Extremes</h2>
+            <p>Climate change has led to significant shifts in weather patterns, resulting in more extreme weather events:</p>
+            <ul>
+                <li><strong>Heatwaves:</strong> Increased frequency and intensity of heatwaves can lead to health crises and energy shortages.</li>
+                <li><strong>Storms:</strong> More severe storms and hurricanes are becoming common due to rising ocean temperatures.</li>
+                <li><strong>Droughts:</strong> Changing rainfall patterns result in prolonged droughts, affecting water supplies and agriculture.</li>
+                <li><strong>Flooding:</strong> Increased rainfall and rising sea levels contribute to more frequent flooding in coastal regions.</li>
+            </ul>
+            <img src="images/extreme-weather.jpg" alt="Extreme Weather Events" style="width:100%; margin-top:20px; border-radius:8px;">
+        </section>
+
+        <section class="page-section">
+            <h2>Impact of Climate Change on Weather and Climate</h2>
+            <p>The Intergovernmental Panel on Climate Change (IPCC) reports that:</p>
+            <ul>
+                <li>The global average temperature has risen by approximately 1.2°C since the late 19th century.</li>
+                <li>Rising sea levels threaten low-lying coastal areas, with projections estimating a rise of up to 1 meter by 2100.</li>
+                <li>Climate change could force over 200 million people to migrate by 2050 due to uninhabitable conditions.</li>
+            </ul>
+            <img src="images/ipcc-report.jpg" alt="IPCC Report" style="width:100%; margin-top:20px; border-radius:8px;">
+        </section>
+
+        <section class="page-section">
+            <h2>Solutions and Actions for Climate Action</h2>
+            <p>To mitigate the impacts of climate change, we can take the following actions:</p>
+            <ul>
+                <li>Investing in renewable energy sources like solar, wind, and hydropower.</li>
+                <li>Improving energy efficiency in buildings and transportation.</li>
+                <li>Implementing sustainable agricultural practices to reduce carbon emissions.</li>
+                <li>Encouraging afforestation and reforestation to absorb CO₂.</li>
+            </ul>
+            <img src="images/renewable-energy.jpg" alt="Renewable Energy Sources" style="width:100%; margin-top:20px; border-radius:8px;">
+        </section>
+
+        <section class="page-section">
+            <h2>Interactive Quiz</h2>
+            <p>Test your knowledge about weather and climate with this short quiz:</p>
+            <div class="quiz">
+                <p><strong>1. What is the primary cause of climate change?</strong></p>
+                <ul>
+                    <li><input type="radio" name="q1" value="a"> Natural climate variability</li>
+                    <li><input type="radio" name="q1" value="b"> Greenhouse gas emissions from human activities</li>
+                    <li><input type="radio" name="q1" value="c"> Changes in solar radiation</li>
+                </ul>
+
+                <p><strong>2. Which of the following is NOT a greenhouse gas?</strong></p>
+                <ul>
+                    <li><input type="radio" name="q2" value="a"> Carbon Dioxide (CO₂)</li>
+                    <li><input type="radio" name="q2" value="b"> Nitrous Oxide (N₂O)</li>
+                    <li><input type="radio" name="q2" value="c"> Oxygen (O₂)</li>
+                </ul>
+
+                <p><strong>3. What is the goal of Sustainable Development Goal 13?</strong></p>
+                <ul>
+                    <li><input type="radio" name="q3" value="a"> End poverty in all forms</li>
+                    <li><input type="radio" name="q3" value="b"> Combat climate change and its impacts</li>
+                    <li><input type="radio" name="q3" value="c"> Ensure availability and sustainable management of water</li>
+                </ul>
+
+                <button onclick="checkAnswers()">Submit Quiz</button>
+                <p id="quiz-result" style="margin-top: 10px; font-weight: bold;"></p>
+            </div>
+        </section>
+
+        <!-- Collapsible Teacher's Lesson Plan Section -->
+        <h2 class="toggle-header">Teacher's Lesson Plan (Click to View)</h2>
+        <div id="lesson-plan" style="display:none;">
+            <h3>Lesson Plan: Weather and Climate in the Context of Climate Action</h3>
+            <p><strong>Grade Level:</strong> High School (Grades 9-12)</p>
+            <p><strong>Duration:</strong> 5 Class Periods (45-60 minutes each)</p>
+
+            <h3>Objectives:</h3>
+            <ul>
+                <li>Understand the relationship between weather, climate, and climate change.</li>
+                <li>Analyze the impact of climate change on weather patterns and extreme weather events.</li>
+                <li>Explore NASA data sources and tools to study weather and climate.</li>
+                <li>Develop a community action plan to address local climate change issues.</li>
+            </ul>
+
+            <h3>Materials Needed:</h3>
+            <ul>
+                <li>Computers or tablets with internet access</li>
+                <li>Access to NASA's <a href="https://earthdata.nasa.gov/" target="_blank">Earth Observing System Data and Information System (EOSDIS)</a></li>
+                <li>Weather tracking tools (anemometer, thermometer, rain gauge)</li>
+            </ul>
+
+            <h3>Lesson Outline:</h3>
+            <h4>Day 1: Introduction to Weather and Climate</h4>
+            <ul>
+                <li>Warm-Up Discussion: Differences between weather and climate.</li>
+                <li>Video Presentation: Introduction to climate change.</li>
+                <li>Homework Assignment: Research local weather patterns.</li>
+            </ul>
+
+            <h4>Day 2: Analyzing Weather Data</h4>
+            <ul>
+                <li>Hands-on activity collecting local weather data.</li>
+                <li>Discussion on how local weather relates to global climate change.</li>
+            </ul>
+
+            <h4>Day 3: Exploring Climate Change Impact</h4>
+            <ul>
+                <li>Group presentations on climate change impacts in different regions.</li>
+                <li>Discuss potential solutions for mitigating these impacts.</li>
+            </ul>
+
+            <h4>Day 4-5: Project Work</h4>
+            <ul>
+                <li>Use NASA tools to analyze datasets like land surface temperature (MODIS) and rainfall (GPM).</li>
+                <li>Create a climate action plan based on data findings.</li>
+            </ul>
+
+            <h3>Assessment:</h3>
+            <ul>
+                <li>Participation in activities and presentations.</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Global Warming and Climate Change - Educational Materials. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function checkAnswers() {
+            let score = 0;
+            if (document.querySelector('input[name="q1"]:checked')?.value === 'a') score++;
+            if (document.querySelector('input[name="q2"]:checked')?.value === 'a') score++;
+
+            const result = document.getElementById('quiz-result');
+            if (score === 2) {
+                result.textContent = "Great job! You got both answers right.";
+                result.style.color = "green";
+            } else if (score === 1) {
+                result.textContent = "Good try! You got 1 answer right.";
+                result.style.color = "orange";
+            } else {
+                result.textContent = "Keep learning! You didn't get any answers right.";
+                result.style.color = "red";
+            }
+        }
+
+        // Toggle lesson plan visibility
+        $(document).ready(function(){
+            $(".toggle-header").click(function(){
+                $("#lesson-plan").slideToggle();
+            });
+        });
+    </script>
+</body>
+</html>
