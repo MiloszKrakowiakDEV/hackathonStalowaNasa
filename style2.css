@@ -85,43 +85,35 @@ main {
 }
 
 #section1 {
-    background-image: url(img/poprawne_cele.png);
+    background-image: url(img/17celow.png);
     background-repeat: no-repeat;
+    background-size: 1300px;
 }
 
 #section2 {
     background-image: url(img/NoPoverty_gotowy.jpg);
     color: white;
-    background-repeat: no-repeat;
-
 }
 
 #section3 {
     background-image: url(img/PartnershipForTheGoals_gotowy.jpg);
     color: white;
-    background-repeat: no-repeat;
-
 }
 
 #section4 {
     background-image: url(img/2016_2030.png);
     color: white;
-    background-repeat: no-repeat;
-
 }
 
 #section5 {
-    background-image: url(img/193\ countries.png);
+    background-image: url(img/193\ krajów.png);
     color: white;
     background-repeat: no-repeat;
-    background-size: 1000px;
-
+    background-size: 1300px;
 }
 
 #section6 {
     background-image: url(img/SustainableDevelopmentGoals_gotowy.jpg);
-    background-repeat: no-repeat;
-
 }
 
 .main {
