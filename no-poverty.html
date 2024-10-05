@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Poverty - SDG 1</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS -->
+</head>
+<body>
+    <header>
+        <div class="banner">No Poverty - SDG 1</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="educational-materials.html">Educational Materials</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-section">
+            <h1>No Poverty</h1>
+            <p>Poverty eradication is one of the biggest global challenges. Sustainable Development Goal 1 aims to end poverty in all its forms by 2030.</p>
+            <img src="images/no-poverty.jpg" alt="No Poverty Image" style="width:100%; margin-top:20px; border-radius:8px;">
+        </section>
+
+        <section class="page-section">
+            <h2>Introduction to No Poverty</h2>
+            <p>Globally, more than 700 million people live in extreme poverty, struggling to survive on less than $1.90 a day. Poverty is about more than just income – it affects access to basic services such as education, healthcare, clean water, and decent housing.</p>
+        </section>
+
+        <section class="page-section">
+            <h2>Key Facts</h2>
+            <ul>
+                <li><strong>Extreme Poverty:</strong> More than 10% of the world’s population lives in extreme poverty.</li>
+                <li><strong>Vulnerable Populations:</strong> Women and children are more likely to suffer from poverty, especially in rural areas.</li>
+                <li><strong>Poverty Rate:</strong> The global poverty rate has been cut by more than half since 1990, but the rate of reduction has slowed.</li>
+                <li><strong>COVID-19 Impact:</strong> The COVID-19 pandemic pushed an estimated 97 million more people into poverty in 2020.</li>
+            </ul>
+        </section>
+
+        <section class="page-section">
+            <h2>Challenges to Ending Poverty</h2>
+            <p>Despite the progress made, significant challenges remain in the fight to end poverty:</p>
+            <ul>
+                <li>Lack of access to education and job opportunities.</li>
+                <li>Weak social protection systems.</li>
+                <li>Conflict and political instability in many regions.</li>
+                <li>Impact of climate change on vulnerable populations.</li>
+            </ul>
+        </section>
+
+        <section class="page-section">
+            <h2>Solutions and Actions</h2>
+            <p>Achieving SDG 1 requires global efforts across many sectors. Some solutions include:</p>
+            <ul>
+                <li>Investing in education and skills development.</li>
+                <li>Strengthening social protection systems, including healthcare and unemployment benefits.</li>
+                <li>Improving access to basic services like clean water, healthcare, and housing.</li>
+                <li>Supporting economic growth through job creation and fair wages.</li>
+            </ul>
+        </section>
+
+        <section class="page-section">
+            <h2>Interactive Quiz</h2>
+            <p>Test your knowledge about poverty with this short quiz:</p>
+            <div class="quiz">
+                <p><strong>1. What is considered the global extreme poverty line?</strong></p>
+                <ul>
+                    <li><input type="radio" name="q1" value="a"> $1.90 per day</li>
+                    <li><input type="radio" name="q1" value="b"> $3.50 per day</li>
+                    <li><input type="radio" name="q1" value="c"> $5.00 per day</li>
+                </ul>
+
+                <p><strong>2. What percentage of the world’s population lives in extreme poverty?</strong></p>
+                <ul>
+                    <li><input type="radio" name="q2" value="a"> 5%</li>
+                    <li><input type="radio" name="q2" value="b"> 10%</li>
+                    <li><input type="radio" name="q2" value="c"> 15%</li>
+                </ul>
+
+                <button onclick="checkAnswers()">Submit Quiz</button>
+                <p id="quiz-result" style="margin-top: 10px; font-weight: bold;"></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 No Poverty - Educational Materials. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function checkAnswers() {
+            let score = 0;
+            if (document.querySelector('input[name="q1"]:checked')?.value === 'a') score++;
+            if (document.querySelector('input[name="q2"]:checked')?.value === 'b') score++;
+
+            const result = document.getElementById('quiz-result');
+            if (score === 2) {
+                result.textContent = "Great job! You got both answers right.";
+                result.style.color = "green";
+            } else if (score === 1) {
+                result.textContent = "Good try! You got 1 answer right.";
+                result.style.color = "orange";
+            } else {
+                result.textContent = "Keep learning! You didn't get any answers right.";
+                result.style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>
