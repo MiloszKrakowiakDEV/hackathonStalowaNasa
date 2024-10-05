@@ -1,87 +1,174 @@
-*{
+/* Global Reset */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  body {
-      font-family: Arial, sans-serif;
-      overflow-x: hidden;
-  }
-  
-  header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background-color: #333;
-      color: white;
-      text-align: center;
-      z-index: 1000;
-  }
-  
-  .banner {
-      font-size: 2em;
-      padding: 20px;
-  }
-  
-  nav ul {
-      display: flex;
-      justify-content: center;
-      list-style: none;
-      background-color: #444;
-      padding: 10px;
-  }
-  
-  nav ul li {
-      margin: 0 15px;
-  }
-  
-  nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-size: 1.2em;
-  }
-  
-  main {
-      margin-top: 150px; 
-  }
-  
-  .page-section {
-      min-height: calc(100vh - 150px); 
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      transition: background-color 0.5s ease;
-  }
-  
-  #section1 {
-      background-image: url(img/17Goals_kopia1.jpg);
-      background-repeat: no-repeat;
-  }
-  
-  #section2 {
-      background-image: url(img/NoPoverty_gotowy.jpg);
-      background-repeat: no-repeat;
-      color: white;
+}
 
-  
-  }
-  
-  #section3 {
-      background-image: url(img/PartnershipForTheGoals.jpg);
-      
-  }
-  #section4 {
-      background-color: #a399ff;
-  }
-  #section5 {
-      background-color: #e6da33;
-  }
-  #section6 {
-      background-color: #c281b7;
-  }
-  .main{
-      font-size: 70px;
-  }
+/* Body and Font Settings */
+body {
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+    background-color: #f4f4f4;
+    line-height: 1.6; /* Improves readability */
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #007BFF; /* Blue Header */
+    color: white;
+    text-align: center;
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+.banner {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    background-color: #0056b3; /* Darker blue for nav */
+    padding: 10px;
+    margin-top: 10px; /* Space below banner */
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease; /* Transition for hover */
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #ffcc00; /* Gold color on hover */
+}
+
+/* Main Content */
+main {
+    margin-top: 150px; /* Ensure main content is below the fixed header */
+    padding: 20px;
+}
+
+/* Section Styling */
+.page-section {
+    margin: 20px auto; /* Space between sections */
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #ffffff; /* White background for sections */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s; /* Smooth transition on hover */
+}
+
+.page-section:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+h1, h2 {
+    color: #333;
+    margin: 10px 0; /* Reduced margin */
+}
+
+h2 {
+    border-bottom: 2px solid #007BFF; /* Underline for subheadings */
+    padding-bottom: 5px;
+}
+
+p {
+    font-size: 1.1em;
+    color: #555; /* Slightly gray text for better contrast */
+}
+
+/* List Styles */
+ul {
+    list-style-type: none; /* Remove default bullet points */
+    padding-left: 0;
+}
+
+ul li {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+ul li a {
+    color: #007BFF; /* Blue links */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s; /* Transition for hover */
+}
+
+ul li a:hover {
+    color: #ffcc00; /* Gold color on hover */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #007BFF; /* Blue footer */
+    color: white;
+    position: relative; /* Adjusts position to allow for footer to sit below content */
+}
+
+.quiz {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.quiz p {
+    font-size: 1.2em;
+}
+
+.quiz button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.quiz button:hover {
+    background-color: #0056b3;
+}
+
+#quiz-result {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .banner {
+        font-size: 1.5em;
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack navigation items on smaller screens */
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    h1, h2 {
+        font-size: 1.5em; /* Adjust font size on smaller screens */
+    }
+}
