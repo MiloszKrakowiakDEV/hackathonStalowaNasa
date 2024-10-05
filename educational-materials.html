@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css"> <!-- Link to your CSS -->
     <script defer src="search.js"></script> <!-- Link to JS file for search -->
     <link rel="icon" type="image/x-icon" href="img/icon3.png">
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Link to jQuery -->
 </head>
 <body>
     <header>
@@ -20,7 +20,7 @@
             </ul>
         </nav>
     </header>
-
+    <br>
     <main>
         <section class="page-section">
             <h1>Welcome to the Educational Materials Page</h1>
@@ -33,7 +33,84 @@
             <input type="text" id="search-input" placeholder="Search topics by subject...">
         </section>
 
-        <section id="topics" class="page-section">
+        <!-- Biology Section -->
+        <section class="page-section">
+            <h2 class="lesson-plans-title" data-target="biology-plan">Biology (Click to View)</h2>
+            <div class="lesson-plan" id="biology-plan" style="display:none;">
+                <ul class="topics-list">
+                    <li><a href="biology/soil-health.html">Soil Health</a></li>
+                    <li><a href="biology/biodiversity-and-ecosystems.html">Biodiversity and Ecosystems</a></li>
+                    <li><a href="biology/sustainable-food-systems.html">Sustainable Food Systems</a></li>
+                    <li><a href="biology/impact-of-climate-change.html">Impact of Climate Change on Ecosystems</a></li>
+                    <li><a href="biology/forestry-and-wildlife-management.html">Forestry and Wildlife Management</a></li>
+                    <li><a href="biology/genetic-diversity.html">Genetic Diversity and Species Conservation</a></li>
+                    <li><a href="biology/human-health.html">Human Health and Ecosystem Services</a></li>
+                    <li><a href="biology/ecological-restoration.html">Ecological Restoration</a></li>
+                    <li><a href="biology/invasive-species.html">Invasive Species</a></li>
+                    <li><a href="biology/microbial-ecology.html">Microbial Ecology</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Chemistry Section -->
+        <section class="page-section">
+            <h2 class="lesson-plans-title" data-target="chemistry-plan">Chemistry (Click to View)</h2>
+            <div class="lesson-plan" id="chemistry-plan" style="display:none;">
+                <ul class="topics-list">
+                    <li><a href="chemistry/geology-and-natural-resources.html">Geology and Natural Resources</a></li>
+                    <li><a href="chemistry/water-quality-management.html">Water Quality and Management</a></li>
+                    <li><a href="chemistry/air-quality-health.html">Air Quality and Health</a></li>
+                    <li><a href="chemistry/renewable-energy.html">Renewable Energy Sources</a></li>
+                    <li><a href="chemistry/sustainable-waste-management.html">Sustainable Waste Management</a></li>
+                    <li><a href="chemistry/green-chemistry.html">Green Chemistry</a></li>
+                    <li><a href="chemistry/atmospheric-chemistry.html">Atmospheric Chemistry</a></li>
+                    <li><a href="chemistry/environmental-chemistry.html">Environmental Chemistry</a></li>
+                    <li><a href="chemistry/energy-storage.html">Energy Storage Solutions</a></li>
+                    <li><a href="chemistry/biochemical-cycles.html">Biochemical Cycles</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Physics Section -->
+        <section class="page-section">
+            <h2 class="lesson-plans-title" data-target="physics-plan">Physics (Click to View)</h2>
+            <div class="lesson-plan" id="physics-plan" style="display:none;">
+                <ul class="topics-list">
+                    <li><a href="physics/weather-and-climate.html">Weather and Climate</a></li>
+                    <li><a href="physics/renewable-energy.html">Renewable Energy Sources</a></li>
+                    <li><a href="physics/sustainable-transportation.html">Sustainable Transportation</a></li>
+                    <li><a href="physics/natural-disasters.html">Natural Disasters and Resilience</a></li>
+                    <li><a href="physics/climate-change.html">Impact of Climate Change on Ecosystems</a></li>
+                    <li><a href="physics/thermodynamics.html">Thermodynamics and Energy Efficiency</a></li>
+                    <li><a href="physics/fluid-dynamics.html">Fluid Dynamics</a></li>
+                    <li><a href="physics/electromagnetism.html">Electromagnetism and Renewable Energy</a></li>
+                    <li><a href="physics/radiation-climate.html">Radiation and Climate</a></li>
+                    <li><a href="physics/remote-sensing.html">Remote Sensing and Climate Monitoring</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Geography Section -->
+        <section class="page-section">
+            <h2 class="lesson-plans-title" data-target="geography-plan">Geography (Click to View)</h2>
+            <div class="lesson-plan" id="geography-plan" style="display:none;">
+                <ul class="topics-list">
+                    <li><a href="geography/weather-and-climate.html">Weather and Climate</a></li>
+                    <li><a href="geography/natural-disasters.html">Natural Disasters and Resilience</a></li>
+                    <li><a href="geography/oceans-coastal-ecosystems.html">Oceans and Coastal Ecosystems</a></li>
+                    <li><a href="geography/sustainable-urban-development.html">Sustainable Urban Development</a></li>
+                    <li><a href="geography/forestry-wildlife.html">Forestry and Wildlife Management</a></li>
+                    <li><a href="geography/geospatial-analysis.html">Geospatial Analysis and Remote Sensing</a></li>
+                    <li><a href="geography/climate-migration.html">Climate Change and Migration</a></li>
+                    <li><a href="geography/land-use-planning.html">Sustainable Land Use Planning</a></li>
+                    <li><a href="geography/water-resource-management.html">Water Resource Management</a></li>
+                    <li><a href="geography/environmental-impact-agriculture.html">Environmental Impact of Agriculture</a></li>
+                </ul>
+            </div>
+        </section>
+
+
+        <!-- <section id="topics" class="page-section">
             <h2>Topics</h2>
             <p>Below is a list of topics you can explore, along with their associated subjects:</p>
             <ul id="topics-list">
@@ -98,7 +175,7 @@
                     <span class="label">Subjects: Waste Management, Sustainability, Environment</span>
                 </li>
             </ul>
-        </section>
+        </section> -->
     </main>
 
     <footer>
@@ -121,6 +198,16 @@
                     topic.style.display = "none";
                 }
             }
+        });
+    });
+
+    $(document).ready(function() {
+        $('.lesson-plans-title').click(function() {
+            var target = $(this).data('target'); // Get the target lesson plan using the data attribute
+            $('#' + target).toggle(); // Toggle the visibility of the specific lesson plan
+
+            // Optionally, hide other lesson plans if you want to display only one at a time
+            $('.lesson-plan').not('#' + target).hide();
         });
     });
 

@@ -69,6 +69,7 @@ main {
 
 /* Section Styling */
 .page-section {
+    position: relative;
     margin: 20px auto; /* Space between sections */
     padding: 20px;
     border-radius: 8px;
@@ -115,6 +116,7 @@ ul li a {
 }
 
 ul li a:hover {
+    font-weight: bold;
     color: #ffcc00; /* Gold color on hover */
 }
 
