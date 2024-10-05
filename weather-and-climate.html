@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather and Climate - SDG 13</title>
     <link rel="stylesheet" href="style.css"> <!-- Link to your CSS -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Link to jQuery -->
 </head>
 <body>
     <header>
@@ -22,171 +21,184 @@
     <main>
         <section class="page-section">
             <h1>Weather and Climate</h1>
-            <p>Weather refers to the short-term atmospheric conditions in a specific area, while climate is the long-term average of weather patterns over extended periods. Understanding the difference between weather and climate is crucial in addressing the impacts of climate change, especially in the context of Sustainable Development Goal 13: Climate Action.</p>
-            <img src="images/weather-climate.jpg" alt="Weather and Climate Image" style="width:100%; margin-top:20px; border-radius:8px;">
+            <p>Climate change is a pressing global challenge that affects weather patterns, ecosystems, and human livelihoods. Understanding the science behind weather and climate is crucial for addressing SDG 13: Climate Action.</p>
+            <img src="images/weather-and-climate.jpg" alt="Weather and Climate" style="width:100%; margin-top:20px; border-radius:8px;">
         </section>
 
         <section class="page-section">
-            <h2>Understanding Weather Patterns</h2>
-            <p>Weather patterns are influenced by several factors, including:</p>
-            <ul>
-                <li><strong>Temperature:</strong> A measure of how hot or cold the atmosphere is.</li>
-                <li><strong>Humidity:</strong> The amount of moisture in the air, affecting cloud formation and precipitation.</li>
-                <li><strong>Wind:</strong> Air movement that can transport heat and moisture across regions.</li>
-                <li><strong>Precipitation:</strong> Any form of water, liquid or solid, that falls from clouds, impacting water availability and agriculture.</li>
-            </ul>
-            <img src="images/weather-patterns.jpg" alt="Weather Patterns" style="width:100%; margin-top:20px; border-radius:8px;">
+            <h2>Introduction</h2>
+            <p>Global warming leads to significant changes in weather patterns, causing severe consequences such as droughts, floods, and heatwaves. This section explores the impacts of climate change and the importance of climate action.</p>
         </section>
 
         <section class="page-section">
-            <h2>Climate Change and Weather Extremes</h2>
-            <p>Climate change has led to significant shifts in weather patterns, resulting in more extreme weather events:</p>
+            <h2>Key Facts</h2>
             <ul>
-                <li><strong>Heatwaves:</strong> Increased frequency and intensity of heatwaves can lead to health crises and energy shortages.</li>
-                <li><strong>Storms:</strong> More severe storms and hurricanes are becoming common due to rising ocean temperatures.</li>
-                <li><strong>Droughts:</strong> Changing rainfall patterns result in prolonged droughts, affecting water supplies and agriculture.</li>
-                <li><strong>Flooding:</strong> Increased rainfall and rising sea levels contribute to more frequent flooding in coastal regions.</li>
+                <li><strong>Temperature Rise:</strong> The Earth's average temperature has risen by approximately 1.1°C since the late 19th century.</li>
+                <li><strong>Extreme Weather:</strong> Climate change increases the frequency of extreme weather events.</li>
+                <li><strong>Impact on Biodiversity:</strong> Changes in climate threaten various species and ecosystems.</li>
+                <li><strong>Global Response:</strong> Countries are called to reduce greenhouse gas emissions under the Paris Agreement.</li>
             </ul>
-            <img src="images/extreme-weather.jpg" alt="Extreme Weather Events" style="width:100%; margin-top:20px; border-radius:8px;">
         </section>
 
         <section class="page-section">
-            <h2>Impact of Climate Change on Weather and Climate</h2>
-            <p>The Intergovernmental Panel on Climate Change (IPCC) reports that:</p>
-            <ul>
-                <li>The global average temperature has risen by approximately 1.2°C since the late 19th century.</li>
-                <li>Rising sea levels threaten low-lying coastal areas, with projections estimating a rise of up to 1 meter by 2100.</li>
-                <li>Climate change could force over 200 million people to migrate by 2050 due to uninhabitable conditions.</li>
-            </ul>
-            <img src="images/ipcc-report.jpg" alt="IPCC Report" style="width:100%; margin-top:20px; border-radius:8px;">
+            <h2>Challenges of Climate Change</h2>
+            <p>Challenges include increasing temperatures, rising sea levels, and changes in precipitation patterns that disrupt food and water supply.</p>
         </section>
 
         <section class="page-section">
-            <h2>Solutions and Actions for Climate Action</h2>
-            <p>To mitigate the impacts of climate change, we can take the following actions:</p>
+            <h2>Solutions and Actions</h2>
+            <p>Global efforts are needed to mitigate climate change impacts, including:</p>
             <ul>
-                <li>Investing in renewable energy sources like solar, wind, and hydropower.</li>
-                <li>Improving energy efficiency in buildings and transportation.</li>
-                <li>Implementing sustainable agricultural practices to reduce carbon emissions.</li>
-                <li>Encouraging afforestation and reforestation to absorb CO₂.</li>
+                <li>Investing in renewable energy.</li>
+                <li>Enhancing energy efficiency.</li>
+                <li>Promoting sustainable agricultural practices.</li>
+                <li>Supporting policies that reduce carbon emissions.</li>
             </ul>
-            <img src="images/renewable-energy.jpg" alt="Renewable Energy Sources" style="width:100%; margin-top:20px; border-radius:8px;">
         </section>
 
         <section class="page-section">
             <h2>Interactive Quiz</h2>
-            <p>Test your knowledge about weather and climate with this short quiz:</p>
-            <div class="quiz">
-                <p><strong>1. What is the primary cause of climate change?</strong></p>
-                <ul>
-                    <li><input type="radio" name="q1" value="a"> Natural climate variability</li>
-                    <li><input type="radio" name="q1" value="b"> Greenhouse gas emissions from human activities</li>
-                    <li><input type="radio" name="q1" value="c"> Changes in solar radiation</li>
-                </ul>
+            <p>Test your knowledge about weather, climate, and climate action!</p>
+            <button id="start-quiz-btn">Start Quiz</button>
+            <div id="quiz" style="display: none;">
+                <div id="timer" style="font-weight: bold;">Time left: <span id="time">120</span> seconds</div>
+                <div class="quiz">
+                    <p><strong>1. What gas is the primary contributor to climate change?</strong></p>
+                    <ul>
+                        <li><input type="radio" name="q1" value="a"> Carbon Dioxide (CO₂)</li>
+                        <li><input type="radio" name="q1" value="b"> Oxygen (O₂)</li>
+                        <li><input type="radio" name="q1" value="c"> Nitrogen (N₂)</li>
+                    </ul>
 
-                <p><strong>2. Which of the following is NOT a greenhouse gas?</strong></p>
-                <ul>
-                    <li><input type="radio" name="q2" value="a"> Carbon Dioxide (CO₂)</li>
-                    <li><input type="radio" name="q2" value="b"> Nitrous Oxide (N₂O)</li>
-                    <li><input type="radio" name="q2" value="c"> Oxygen (O₂)</li>
-                </ul>
+                    <p><strong>2. Which international agreement aims to limit global warming?</strong></p>
+                    <ul>
+                        <li><input type="radio" name="q2" value="a"> Kyoto Protocol</li>
+                        <li><input type="radio" name="q2" value="b"> Paris Agreement</li>
+                        <li><input type="radio" name="q2" value="c"> Montreal Protocol</li>
+                    </ul>
 
-                <p><strong>3. What is the goal of Sustainable Development Goal 13?</strong></p>
-                <ul>
-                    <li><input type="radio" name="q3" value="a"> End poverty in all forms</li>
-                    <li><input type="radio" name="q3" value="b"> Combat climate change and its impacts</li>
-                    <li><input type="radio" name="q3" value="c"> Ensure availability and sustainable management of water</li>
-                </ul>
+                    <p><strong>3. What phenomenon occurs due to rising sea levels?</strong></p>
+                    <ul>
+                        <li><input type="radio" name="q3" value="a"> Flooding</li>
+                        <li><input type="radio" name="q3" value="b"> Drought</li>
+                        <li><input type="radio" name="q3" value="c"> Tornadoes</li>
+                    </ul>
 
-                <button onclick="checkAnswers()">Submit Quiz</button>
-                <p id="quiz-result" style="margin-top: 10px; font-weight: bold;"></p>
+                    <p><strong>4. Which of the following is a renewable energy source?</strong></p>
+                    <ul>
+                        <li><input type="radio" name="q4" value="a"> Solar Energy</li>
+                        <li><input type="radio" name="q4" value="b"> Natural Gas</li>
+                        <li><input type="radio" name="q4" value="c"> Coal</li>
+                    </ul>
+
+                    <p><strong>5. What is a major effect of climate change on agriculture?</strong></p>
+                    <ul>
+                        <li><input type="radio" name="q5" value="a"> Increased crop yields</li>
+                        <li><input type="radio" name="q5" value="b"> Water scarcity</li>
+                        <li><input type="radio" name="q5" value="c"> Stable weather conditions</li>
+                    </ul>
+
+                    <button id="submit-quiz-btn" onclick="checkAnswers()" disabled>Submit Quiz</button>
+                    <p id="quiz-result" style="margin-top: 10px; font-weight: bold;"></p>
+                </div>
             </div>
         </section>
-
-        <!-- Collapsible Teacher's Lesson Plan Section -->
-        <h2 class="toggle-header">Teacher's Lesson Plan (Click to View)</h2>
-        <div id="lesson-plan" style="display:none;">
-            <h3>Lesson Plan: Weather and Climate in the Context of Climate Action</h3>
-            <p><strong>Grade Level:</strong> High School (Grades 9-12)</p>
-            <p><strong>Duration:</strong> 5 Class Periods (45-60 minutes each)</p>
-
-            <h3>Objectives:</h3>
-            <ul>
-                <li>Understand the relationship between weather, climate, and climate change.</li>
-                <li>Analyze the impact of climate change on weather patterns and extreme weather events.</li>
-                <li>Explore NASA data sources and tools to study weather and climate.</li>
-                <li>Develop a community action plan to address local climate change issues.</li>
-            </ul>
-
-            <h3>Materials Needed:</h3>
-            <ul>
-                <li>Computers or tablets with internet access</li>
-                <li>Access to NASA's <a href="https://earthdata.nasa.gov/" target="_blank">Earth Observing System Data and Information System (EOSDIS)</a></li>
-                <li>Weather tracking tools (anemometer, thermometer, rain gauge)</li>
-            </ul>
-
-            <h3>Lesson Outline:</h3>
-            <h4>Day 1: Introduction to Weather and Climate</h4>
-            <ul>
-                <li>Warm-Up Discussion: Differences between weather and climate.</li>
-                <li>Video Presentation: Introduction to climate change.</li>
-                <li>Homework Assignment: Research local weather patterns.</li>
-            </ul>
-
-            <h4>Day 2: Analyzing Weather Data</h4>
-            <ul>
-                <li>Hands-on activity collecting local weather data.</li>
-                <li>Discussion on how local weather relates to global climate change.</li>
-            </ul>
-
-            <h4>Day 3: Exploring Climate Change Impact</h4>
-            <ul>
-                <li>Group presentations on climate change impacts in different regions.</li>
-                <li>Discuss potential solutions for mitigating these impacts.</li>
-            </ul>
-
-            <h4>Day 4-5: Project Work</h4>
-            <ul>
-                <li>Use NASA tools to analyze datasets like land surface temperature (MODIS) and rainfall (GPM).</li>
-                <li>Create a climate action plan based on data findings.</li>
-            </ul>
-
-            <h3>Assessment:</h3>
-            <ul>
-                <li>Participation in activities and presentations.</li>
-            </ul>
-        </div>
     </main>
 
     <footer>
-        <p>&copy; 2024 Global Warming and Climate Change - Educational Materials. All Rights Reserved.</p>
+        <p>&copy; 2024 Weather and Climate - Educational Materials. All Rights Reserved.</p>
     </footer>
 
     <script>
-        function checkAnswers() {
-            let score = 0;
-            if (document.querySelector('input[name="q1"]:checked')?.value === 'a') score++;
-            if (document.querySelector('input[name="q2"]:checked')?.value === 'a') score++;
+        let timer;
+        let timeLeft = 60; // 2 minutes
+        const startQuizBtn = document.getElementById('start-quiz-btn');
+        const quizSection = document.getElementById('quiz');
+        const submitQuizBtn = document.getElementById('submit-quiz-btn');
+        const timeDisplay = document.getElementById('time');
 
-            const result = document.getElementById('quiz-result');
-            if (score === 2) {
-                result.textContent = "Great job! You got both answers right.";
-                result.style.color = "green";
-            } else if (score === 1) {
-                result.textContent = "Good try! You got 1 answer right.";
-                result.style.color = "orange";
-            } else {
-                result.textContent = "Keep learning! You didn't get any answers right.";
-                result.style.color = "red";
-            }
+        startQuizBtn.addEventListener('click', function() {
+            quizSection.style.display = 'block';
+            startQuizBtn.disabled = true; // Disable the start button
+            startTimer();
+            submitQuizBtn.disabled = false; // Enable the submit button
+        });
+
+        function startTimer() {
+            timer = setInterval(function() {
+                if (timeLeft > 0) {
+                    timeLeft--;
+                    timeDisplay.textContent = timeLeft;
+                } else {
+                    clearInterval(timer);
+                    submitQuizBtn.disabled = true; // Disable submit button when time's up
+                    document.querySelectorAll('input[type="radio"]').forEach(input => {
+                        input.disabled = true; // Disable all radio buttons
+                    });
+                    showCorrectAnswers();
+                }
+            }, 1000);
         }
 
-        // Toggle lesson plan visibility
-        $(document).ready(function(){
-            $(".toggle-header").click(function(){
-                $("#lesson-plan").slideToggle();
-            });
-        });
+        function checkAnswers() {
+            clearInterval(timer); // Stop the timer when submitting
+            let score = 0;
+            const totalQuestions = 5;
+
+            const answers = {
+                q1: 'a',
+                q2: 'b',
+                q3: 'a',
+                q4: 'a',
+                q5: 'b'
+            };
+
+            for (let i = 1; i <= totalQuestions; i++) {
+                const selected = document.querySelector(`input[name="q${i}"]:checked`);
+                const correctAnswer = answers[`q${i}`];
+
+                if (selected) {
+                    if (selected.value === correctAnswer) {
+                        score++;
+                        selected.parentNode.style.color = "green";
+                        selected.parentNode.appendChild(document.createTextNode(" (Correct)"));
+                    } else {
+                        selected.parentNode.style.color = "red";
+                        selected.parentNode.appendChild(document.createTextNode(` (Incorrect: ${correctAnswer})`));
+                    }
+                } else {
+                    // Mark unanswered questions as incorrect and show the correct answer
+                    const correctInput = document.querySelector(`input[name="q${i}"][value="${correctAnswer}"]`);
+                    if (correctInput) {
+                        correctInput.parentNode.style.color = "red"; // Mark the correct answer in red
+                        correctInput.parentNode.appendChild(document.createTextNode(` (Incorrect: ${correctAnswer})`));
+                    }
+                }
+            }
+
+            const resultMessage = `You scored ${score} out of ${totalQuestions}.`;
+            document.getElementById('quiz-result').textContent = resultMessage;
+            submitQuizBtn.disabled = true; // Disable submit button after submission
+        }
+
+        function showCorrectAnswers() {
+            const answers = {
+                q1: 'a',
+                q2: 'b',
+                q3: 'a',
+                q4: 'a',
+                q5: 'b'
+            };
+
+            for (let i = 1; i <= 5; i++) {
+                const correctAnswer = answers[`q${i}`];
+                const correctInput = document.querySelector(`input[name="q${i}"][value="${correctAnswer}"]`);
+                if (correctInput) {
+                    correctInput.parentNode.style.color = "red"; // Correct answer in red
+                    correctInput.parentNode.appendChild(document.createTextNode(` (Incorrect: ${correctAnswer})`));
+                }
+            }
+        }
     </script>
 </body>
 </html>
