@@ -44,11 +44,11 @@
   }
   
   main {
-      margin-top: 150px; /* Wysokość banera i menu /
+      margin-top: 150px; 
   }
   
   .page-section {
-      min-height: calc(100vh - 150px); / Wysokość sekcji równa oknu minus baner i menu */
+      min-height: calc(100vh - 150px); 
       display: flex;
       justify-content: center;
       align-items: center;
