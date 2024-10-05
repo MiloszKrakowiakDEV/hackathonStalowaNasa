@@ -31,6 +31,7 @@ header {
     font-size: 4em;
     font-weight: bold;
     padding-top: 15px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 nav ul {
@@ -38,8 +39,10 @@ nav ul {
     justify-content: center;
     list-style: none;
     background-color: #0056b3; /* Darker blue for nav */
-    padding: 10px;
-    margin-top: 15px; /* Space below banner */
+    padding: 5px;
+    width: 99.5%;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 
@@ -50,13 +53,15 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1.4em;
     transition: color 0.3s ease; /* Transition for hover */
+    font-family: 'Times New Roman', Times, serif;
 }
 
 nav ul li a:hover {
     text-decoration: underline;
     color: #ffcc00; /* Gold color on hover */
+    font-family: 'Times New Roman', Times, serif;
 }
 
 /* Main Content */
@@ -67,6 +72,7 @@ main {
 
 /* Section Styling */
 .page-section {
+    position: relative;
     margin: 20px auto; /* Space between sections */
     padding: 20px;
     border-radius: 8px;
@@ -114,6 +120,7 @@ ul li a {
 }
 
 ul li a:hover {
+    font-weight: bold;
     color: #ffcc00; /* Gold color on hover */
 }
 
@@ -143,7 +150,19 @@ footer p{
 .quiz ul {
     padding-left: 20px; /* Added padding for better alignment */
 }
-
+#start-quiz-btn{
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+#start-quiz-btn:hover{
+    background-color: #0056b3;
+}
 .quiz button {
     background-color: #007BFF;
     color: white;
@@ -194,4 +213,17 @@ footer p{
         width: 100%; /* Full-width buttons on small screens */
         font-size: 1.1em; /* Ensures button remains readable */
     }
+}
+#search-input{
+    border: 2px solid #ccc; /* Szare obramowanie */
+  border-radius: 5px; /* Zaokrąglenie rogów */
+  font-size: 16px;
+}
+#search-input:hover{
+    border-color: #007BFF;
+}
+#search-input:focus{
+    border-color: #007BFF; /* Zmiana koloru obramowania w focus */
+    outline: none; /* Usunięcie domyślnego niebieskiego obramowania */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }

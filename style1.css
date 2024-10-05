@@ -4,10 +4,12 @@
     box-sizing: border-box;
 }
 
-body {
+html, body {
     font-family: Arial, sans-serif;
     overflow-x: hidden;
     background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Header */
@@ -37,7 +39,7 @@ nav ul {
     width: 99.5%;
     border-radius: 10px;
     margin-bottom: 10px;
-    
+        
 }
 
 nav ul li {
@@ -46,11 +48,13 @@ nav ul li {
 
 nav ul li a {
     color: white;
+    font-weight: bold;
     text-decoration: none;
     font-size: 1.2em;
 }
 nav ul li a:hover {
     text-decoration: underline;
+    font-weight: bold;
     color: #ffcc00; /* Gold color on hover */
     font-size: larger;
     font-weight: lighter;
@@ -59,7 +63,7 @@ main {
     margin-top: 150px; 
     padding: 20px;
     opacity: 1.0;
-    font-style: oblique;
+    
 }
 
 /* Page sections */
@@ -149,4 +153,19 @@ footer {
     background-color: #007BFF; /* Blue footer */
     color: white;
     position: relative; /* Adjusts position to allow for footer to sit below content */
+    margin-top: auto;
+}
+
+#about{
+    font-size: 1.2em;
+    width: 55%;
+    float: left;
+    padding: 10px;
+}
+img{
+    width: 45%;
+}
+#h1{
+    padding-left: 10px;
+    padding-top: 10px;
 }
