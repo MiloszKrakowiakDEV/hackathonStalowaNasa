@@ -1,88 +1,119 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  body {
-      font-family: Arial, sans-serif;
-      overflow-x: hidden;
-  }
-  
-  header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background-color: #333;
-      color: white;
-      text-align: center;
-      z-index: 1000;
-  }
-  
-  .banner {
-      font-size: 2em;
-      padding: 20px;
-  }
-  
-  nav ul {
-      display: flex;
-      justify-content: center;
-      list-style: none;
-      background-color: #444;
-      padding: 10px;
-  }
-  
-  nav ul li {
-      margin: 0 15px;
-  }
-  
-  nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-size: 1.2em;
-  }
-  
-  main {
-      margin-top: 150px; 
-  }
-  
-  .page-section {
-      min-height: calc(100vh - 150px); 
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      transition: background-color 0.5s ease;
-  }
-  
-  #section1 {
-      background-image: url(img/17GOALS.png);
-      background-repeat: no-repeat;
-  }
-  
-  #section2 {
-      background-image: url(img/NoPoverty_gotowy.jpg);
-      background-repeat: no-repeat;
-      color: white;
+}
 
-  
-  }
-  
-  #section3 {
-      background-image: url(img/PartnershipForTheGoals_gotowy.jpg);
-      background-repeat: no-repeat;
-      color: white;
-  }
-  #section4 {
-      background-color: #a399ff;
-  }
-  #section5 {
-      background-color: #e6da33;
-  }
-  #section6 {
-      background-color: #c281b7;
-  }
-  .main{
-      font-size: 70px;
-  }
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    z-index: 1000;
+}
+
+.banner {
+    font-size: 2em;
+    padding: 20px;
+}
+
+/* Navigation */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    background-color: #444;
+    padding: 10px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+main {
+    margin-top: 150px; 
+    padding: 20px;
+}
+
+/* Page sections */
+.page-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    transition: transform 0.3s ease;
+}
+
+.page-section:hover {
+    transform: scale(1.05);
+}
+
+/* Grid layout for images */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Specific section styling */
+#section1, #section2, #section3, #section6 {
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+}
+
+#section1 {
+    background-image: url(img/GOALS.png);
+}
+
+#section2 {
+    background-image: url(img/NoPoverty_gotowy.jpg);
+    color: white;
+}
+
+#section3 {
+    background-image: url(img/PartnershipForTheGoals_gotowy.jpg);
+    color: white;
+}
+
+#section4 {
+    background-color: #a399ff;
+    color: #fff;
+}
+
+#section5 {
+    background-color: #e6da33;
+    color: #333;
+}
+
+#section6 {
+    background-image: url(img/SustainableDevelopmentGoals_gotowy.jpg);
+}
+
+.main {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 20px 0;
+}
