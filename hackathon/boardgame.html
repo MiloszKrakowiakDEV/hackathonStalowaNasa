@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Board Game Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Banner Placeholder -->
+    <div class="banner">
+        <h1>Board Game Website</h1>
+    </div>
+
+    <!-- Navigation Placeholder -->
+    <div class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Rules</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Frame for Game -->
+    <div class="game-board" id="gameBoard">
+        <div class="game-square start-square">Start</div>
+        <!-- Squares will be generated here -->
+        <div class="game-square question-square">Start</div>
+        <div class="game-square end-square">End</div>
+    </div>
+
+    <!-- Dice and Roll Button -->
+     <!-- Current Turn Display -->
+     <div id="currentTurn" ></div>
+
+    <div class="dice-container">
+        <div class="dice" id="dice"><img src="six.png" width=80px></div>
+        <button class="roll-btn" id="rollButton" onclick="rollForCurrentPlayer()">Roll Dice</button>
+    </div>
+
+    <!-- Podium Display -->
+    <div class="podium" id="podium">
+        <h1>Game Over!</h1>
+        <h2><div class="winner" id="winner"></div></h2>
+        <h4><div class="nearest" id="nearest"></div></h4>
+    </div>
+
+    <!-- Footer Placeholder -->
+    <footer>
+        <p>© 2024 Board Game Website. All rights reserved.</p>
+    </footer>
+
+    <script src="main.js">
+    </script>
+</body>
+</html>
