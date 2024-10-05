@@ -23,7 +23,8 @@ header {
     color: white;
     text-align: center;
     z-index: 1000;
-    padding: 15px 0;
+    /* padding: 15px 0; */
+    padding-top: 15px;
 }
 
 .banner {
@@ -37,7 +38,10 @@ nav ul {
     list-style: none;
     background-color: #0056b3; /* Darker blue for nav */
     padding: 10px;
-    margin-top: 10px; /* Space below banner */
+    margin-top: 25px; /* Space below banner */
+}
+nav{
+    padding-top: 15px;
 }
 
 nav ul li {
