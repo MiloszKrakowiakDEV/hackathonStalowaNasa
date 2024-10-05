@@ -1,0 +1,199 @@
+body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: all 0.5s ease; /* Smooth transition for podium */
+        }
+
+        /* Banner Placeholder */
+        .banner {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        /* Navigation Placeholder */
+        .navbar {
+            width: 100%;
+            background-color: #333;
+            margin-bottom: 10px;
+        }
+
+        .navbar ul {
+            display: flex;
+            list-style-type: none;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        .navbar ul li {
+            padding: 14px 20px;
+        }
+
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Main Board Game Area */
+        /* Main Board Game Area */
+.game-board {
+    border-radius: 15px;
+    width: 800px; /* Increase the width */
+    height: 400px; /* Increase the height */
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px; /* Less padding */
+    background-color:slategray;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+
+.game-square {
+    width: 60px;  /* Increase the width of squares */
+    height: 60px; /* Increase the height of squares */
+    border: 1px solid #000;
+    text-align: center;
+    line-height: 60px; /* Center text vertically */
+    margin: 2px; /* Less margin */
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px;
+    overflow:visible;
+    background: url('nasa_space.png'); /* Reddish question squares */
+    background-size: 100%; /* End color */
+}
+
+
+        /* Colors for squares */
+        .start-square {
+            background: url('nasa_start.png'); /* Reddish question squares */
+            background-size: 100%; /* End color */
+        }
+
+        .end-square {
+            background: url('nasa_finish.png'); /* Reddish question squares */
+            background-size: 100%; /* End color */
+        }
+
+        .question-square {
+            background: url('nasa_question.png'); /* Reddish question squares */
+            background-size: 100%;
+        }
+
+        .extra-roll-square {
+            background: url('nasa_dice.png'); /* Reddish question squares */
+            background-size: 100%; /* End color */
+        }
+
+        .player {
+            position: absolute;
+            width: 20px; /* Smaller player pieces */
+            height: 20px; /* Smaller player pieces */
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;  /* Text color for visibility */
+            font-size: 10px; /* Smaller text */
+            transition: transform 0.5s ease;  /* Animation for movement */
+        }
+
+        /* Player positioning inside squares */
+        .player1 { background-color: red; top: 0; left: 0; }
+        .player2 { background-color: blue; top: 0; right: 0; }
+        .player3 { background-color: green; bottom: 0; left: 0; }
+        .player4 { background-color: yellow; bottom: 0; right: 0; }
+
+        /* Dice Area */
+        .dice-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .dice {
+            -webkit-user-select: none; /* Safari */        
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* IE10+/Edge */
+             user-select: none; /* Standard */
+            width: 80px; /* Smaller dice */
+            height: 80px; /* Smaller dice */
+            font-size: 40px; /* Smaller font */
+            line-height: 80px;
+            text-align: center;
+            background-color: #fff;
+            border: 2px solid #000;
+            margin: 20px auto;
+        }
+
+        .roll-btn {
+            -webkit-user-select: none; /* Safari */        
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* IE10+/Edge */
+            user-select: none; /* Standard */
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .roll-btn:disabled {
+            background-color: #ccc; /* Gray out the button when disabled */
+            cursor: not-allowed; /* Change cursor to not-allowed */
+        }
+
+        /* Footer Placeholder */
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        /* Podium Styles */
+        .podium {
+            display: none; /* Hide by default */
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Full height for podium */
+            background-color: #fff;
+            color: #333;
+            text-align: center;
+            position: relative;
+        }
+
+        .podium h2 {
+            font-size: 36px;
+            margin: 20px 0;
+        }
+
+        .podium .winner {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .podium .nearest {
+            font-size: 22px;
+            margin: 5px 0;
+        }
+        #currentTurn{
+            border: black solid 1px;
+            background-color: slategray;
+            margin: 15px;
+            padding: 3px;
+            color: white;
+            font: 25px;
+        }
