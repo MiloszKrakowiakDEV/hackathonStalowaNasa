@@ -122,6 +122,7 @@ footer {
     position: relative; /* Adjusts position to allow for footer to sit below content */
 }
 
+/* Quiz Styles */
 .quiz {
     background-color: #f9f9f9;
     padding: 20px;
@@ -132,6 +133,11 @@ footer {
 
 .quiz p {
     font-size: 1.2em;
+    margin: 10px 0; /* Added margin for better spacing */
+}
+
+.quiz ul {
+    padding-left: 20px; /* Added padding for better alignment */
 }
 
 .quiz button {
@@ -142,6 +148,7 @@ footer {
     border-radius: 5px;
     font-size: 1.1em;
     cursor: pointer;
+    transition: background-color 0.3s; /* Transition for hover */
 }
 
 .quiz button:hover {
@@ -151,8 +158,15 @@ footer {
 #quiz-result {
     font-size: 1.2em;
     margin-top: 10px;
+    color: #333; /* Changed to dark gray for better readability */
 }
 
+/* Timer Styles */
+#timer {
+    font-size: 1.5em;
+    color: red;
+    margin-bottom: 10px;
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -170,5 +184,10 @@ footer {
 
     h1, h2 {
         font-size: 1.5em; /* Adjust font size on smaller screens */
+    }
+
+    .quiz button {
+        width: 100%; /* Full-width buttons on small screens */
+        font-size: 1.1em; /* Ensures button remains readable */
     }
 }

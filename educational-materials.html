@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Educational Materials</title>
+    <title>Educational Materials - SDGs EDU</title>
     <link rel="stylesheet" href="style.css"> <!-- Link to your CSS -->
+    <script defer src="search.js"></script> <!-- Link to JS file for search -->
 </head>
 <body>
     <header>
@@ -24,43 +25,103 @@
             <p>This page provides valuable resources for both students and teachers to explore the Sustainable Development Goals (SDGs).</p>
         </section>
 
-        <section id="student-section" class="page-section">
-            <h2>For Students</h2>
-            <p>Discover engaging materials and quizzes that help you learn about the SDGs. Each topic provides detailed information, fun activities, and assessments to test your knowledge.</p>
-        </section>
-
-        <section id="teacher-section" class="page-section">
-            <h2>For Teachers</h2>
-            <p>Find resources to aid your teaching, including lesson plans, assessment tools, and ways to engage students in learning about the SDGs.</p>
+        <!-- Search Section -->
+        <section id="search-section" class="page-section">
+            <h2>Search by Subject</h2>
+            <input type="text" id="search-input" placeholder="Search topics by subject...">
         </section>
 
         <section id="topics" class="page-section">
             <h2>Topics</h2>
-            <p>Below is a list of topics you can explore:</p>
-            <ul>
-                <li><a href="no-poverty.html">1. No Poverty</a></li>
-                <li><a href="zero-hunger.html">2. Zero Hunger</a></li>
-                <li><a href="good-health.html">3. Good Health and Well-being</a></li>
-                <li><a href="quality-education.html">4. Quality Education</a></li>
-                <li><a href="gender-equality.html">5. Gender Equality</a></li>
-                <li><a href="clean-water.html">6. Clean Water and Sanitation</a></li>
-                <li><a href="affordable-clean-energy.html">7. Affordable and Clean Energy</a></li>
-                <li><a href="decent-work.html">8. Decent Work and Economic Growth</a></li>
-                <li><a href="industry-innovation.html">9. Industry, Innovation, and Infrastructure</a></li>
-                <li><a href="reduced-inequalities.html">10. Reduced Inequalities</a></li>
-                <li><a href="sustainable-cities.html">11. Sustainable Cities and Communities</a></li>
-                <li><a href="responsible-consumption.html">12. Responsible Consumption and Production</a></li>
-                <li><a href="climate-action.html">13. Climate Action</a></li>
-                <li><a href="life-below-water.html">14. Life Below Water</a></li>
-                <li><a href="life-on-land.html">15. Life on Land</a></li>
-                <li><a href="peace-justice.html">16. Peace, Justice, and Strong Institutions</a></li>
-                <li><a href="partnerships.html">17. Partnerships for the Goals</a></li>
+            <p>Below is a list of topics you can explore, along with their associated subjects:</p>
+            <ul id="topics-list">
+                <li data-labels="climate, weather, environment">
+                    <a href="weather-and-climate.html">1. Weather and Climate (SDG 13: Climate Action)</a> 
+                    <span class="label">Subjects: Weather, Climate, Environment</span>
+                </li>
+                <li data-labels="geology, natural resources, sustainability">
+                    <a href="geology-and-natural-resources.html">2. Geology and Natural Resources (SDG 12: Responsible Consumption and Production)</a> 
+                    <span class="label">Subjects: Geology, Natural Resources, Sustainability</span>
+                </li>
+                <li data-labels="soil, agriculture, environment">
+                    <a href="soil-health.html">3. Soil Health (SDG 15: Life on Land)</a> 
+                    <span class="label">Subjects: Soil, Agriculture, Environment</span>
+                </li>
+                <li data-labels="water, chemistry, biology">
+                    <a href="water-quality.html">4. Water Quality and Management (SDG 6: Clean Water and Sanitation)</a> 
+                    <span class="label">Subjects: Water, Chemistry, Biology</span>
+                </li>
+                <li data-labels="biodiversity, ecosystems, biology">
+                    <a href="biodiversity.html">5. Biodiversity and Ecosystems (SDG 14: Life Below Water, SDG 15: Life on Land)</a> 
+                    <span class="label">Subjects: Biodiversity, Ecosystems, Biology</span>
+                </li>
+                <li data-labels="energy, physics, environment">
+                    <a href="energy-sources.html">6. Renewable Energy Sources (SDG 7: Affordable and Clean Energy)</a> 
+                    <span class="label">Subjects: Energy, Physics, Environment</span>
+                </li>
+                <li data-labels="air, health, chemistry">
+                    <a href="air-quality.html">7. Air Quality and Health (SDG 3: Good Health and Well-being)</a> 
+                    <span class="label">Subjects: Air, Health, Chemistry</span>
+                </li>
+                <li data-labels="food, agriculture, biology">
+                    <a href="food-systems.html">8. Sustainable Food Systems (SDG 2: Zero Hunger)</a> 
+                    <span class="label">Subjects: Food, Agriculture, Biology</span>
+                </li>
+                <li data-labels="urban planning, sustainability, geography">
+                    <a href="sustainable-cities.html">9. Sustainable Urban Development (SDG 11: Sustainable Cities and Communities)</a> 
+                    <span class="label">Subjects: Urban Planning, Sustainability, Geography</span>
+                </li>
+                <li data-labels="climate change, ecosystems, environment">
+                    <a href="climate-change.html">10. Impact of Climate Change on Ecosystems (SDG 13: Climate Action)</a> 
+                    <span class="label">Subjects: Climate Change, Ecosystems, Environment</span>
+                </li>
+                <li data-labels="transportation, physics, sustainability">
+                    <a href="sustainable-transport.html">11. Sustainable Transportation (SDG 11: Sustainable Cities and Communities)</a> 
+                    <span class="label">Subjects: Transportation, Physics, Sustainability</span>
+                </li>
+                <li data-labels="disasters, geology, resilience">
+                    <a href="natural-disasters.html">12. Natural Disasters and Resilience (SDG 11: Sustainable Cities and Communities)</a> 
+                    <span class="label">Subjects: Disasters, Geology, Resilience</span>
+                </li>
+                <li data-labels="oceans, climate, biodiversity">
+                    <a href="oceans-and-coastal-ecosystems.html">13. Oceans and Coastal Ecosystems (SDG 14: Life Below Water)</a> 
+                    <span class="label">Subjects: Oceans, Climate, Biodiversity</span>
+                </li>
+                <li data-labels="forestry, wildlife, biology">
+                    <a href="forestry-and-wildlife.html">14. Forestry and Wildlife Management (SDG 15: Life on Land)</a> 
+                    <span class="label">Subjects: Forestry, Wildlife, Biology</span>
+                </li>
+                <li data-labels="waste management, sustainability, environment">
+                    <a href="waste-management.html">15. Sustainable Waste Management (SDG 12: Responsible Consumption and Production)</a> 
+                    <span class="label">Subjects: Waste Management, Sustainability, Environment</span>
+                </li>
             </ul>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Educational Materials. All Rights Reserved.</p>
+        <p>&copy; 2024 SDGs EDU. All Rights Reserved.</p>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const searchInput = document.getElementById('search-input');
+        const topicsList = document.getElementById('topics-list');
+        const topics = topicsList.getElementsByTagName('li');
+
+        searchInput.addEventListener('keyup', function() {
+            const filter = searchInput.value.toLowerCase();
+            for (let i = 0; i < topics.length; i++) {
+                let topic = topics[i];
+                let labels = topic.getAttribute('data-labels').toLowerCase();
+                if (labels.includes(filter)) {
+                    topic.style.display = "";
+                } else {
+                    topic.style.display = "none";
+                }
+            }
+        });
+    });
+
+    </script>
 </body>
 </html>
