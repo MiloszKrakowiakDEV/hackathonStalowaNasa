@@ -57,16 +57,22 @@
   }
   
   #section1 {
-      background-color: #ff9999;
+      background-image: url(img/17Goals_kopia1.jpg);
+      background-repeat: no-repeat;
   }
   
   #section2 {
-      background-color: #99ccff;
+      background-image: url(img/NoPoverty_gotowy.jpg);
+      background-repeat: no-repeat;
+      color: white;
+
   
   }
   
   #section3 {
-      background-color: #99ff99;
+      background-image: url(img/PartnershipForTheGoals_gotowy.jpg);
+      background-repeat: no-repeat;
+      color: white;
   }
   #section4 {
       background-color: #a399ff;
