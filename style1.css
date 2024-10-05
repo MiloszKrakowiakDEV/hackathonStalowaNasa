@@ -45,10 +45,15 @@ nav ul li a {
     text-decoration: none;
     font-size: 1.2em;
 }
-
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #ffcc00; /* Gold color on hover */
+}
 main {
     margin-top: 150px; 
     padding: 20px;
+    opacity: 1.0;
+    font-style: oblique;
 }
 
 /* Page sections */
@@ -87,12 +92,14 @@ main {
 #section1 {
     background-image: url(img/poprawne_cele.png);
     background-repeat: no-repeat;
+    
 }
 
 #section2 {
     background-image: url(img/NoPoverty_gotowy.jpg);
     color: white;
     background-repeat: no-repeat;
+    opacity: 0.8;
 
 }
 
@@ -100,6 +107,7 @@ main {
     background-image: url(img/PartnershipForTheGoals_gotowy.jpg);
     color: white;
     background-repeat: no-repeat;
+    opacity: 0.8;
 
 }
 
@@ -111,7 +119,7 @@ main {
 }
 
 #section5 {
-    background-image: url(img/193\ countries.png);
+    background-image: url(img/193_countries.png);
     color: white;
     background-repeat: no-repeat;
     background-size: 1300px;
@@ -128,4 +136,11 @@ main {
     font-size: 3rem;
     font-weight: bold;
     margin: 20px 0;
+}
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #007BFF; /* Blue footer */
+    color: white;
+    position: relative; /* Adjusts position to allow for footer to sit below content */
 }
