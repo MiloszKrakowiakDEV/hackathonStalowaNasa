@@ -73,6 +73,7 @@ main {
     background-color: #ffffff; /* White background for sections */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     transition: transform 0.3s; /* Smooth transition on hover */
+    overflow: hidden;
 }
 
 .page-section:hover {
