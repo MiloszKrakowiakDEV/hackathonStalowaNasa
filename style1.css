@@ -5,7 +5,7 @@
 }
 
 html, body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     overflow-x: hidden;
     background-color: #f4f4f4;
     display: flex;
@@ -154,6 +154,9 @@ footer {
     color: white;
     position: relative; /* Adjusts position to allow for footer to sit below content */
     margin-top: auto;
+    clear: both;
+    position: relative;
+    top: 1px;
 }
 
 #about{
