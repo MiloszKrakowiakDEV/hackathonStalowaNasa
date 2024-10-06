@@ -4,7 +4,6 @@ let players = [
     { name: "Player 3", position: 0, correctAnswersInRow: 0, className: 'player3', currentMoney: 0, challengesToComplete: "" },
     { name: "Player 4", position: 0, correctAnswersInRow: 0, className: 'player4', currentMoney: 0, challengesToComplete: "" }
 ];
-let currentQuestionAnswer;
 const challenges = [
     'a',
     'b',
@@ -21,7 +20,10 @@ const questions = [
     ["Did climate change led to reduction of natural resources?", "no"],
     ["Is solar energy a renewable resource?", "yes"],
     ["Are fossil fuels a renewable resource?", "no"],
-    ["Can soil ouality affect your health?", "yes"]
+    ["Can soil 1uality affect your health?", "yes"],
+    ["How many percent of world population is suffering from poverty?", "25"],
+    ["SDG Goals are estimated to be achieved on a specific year. Which one?", "2030"],
+    ["Which continent is considered the poorest?", "Africa"]
 ];
 
 let currentPlayerIndex = 0;
@@ -265,38 +267,39 @@ function moveBackward(playerIndex) {
 
 
 function askQuestion(playerIndex) {
-    const questionIndex = Math.floor(Math.random() * questions.length);
-    const [question, answer] = questions[questionIndex];
-    currentQuestionAnswer = answer;
+    let player = players[playerIndex];
 
-    document.getElementById('questionText').textContent = `${players[playerIndex].name}, answer this question:\n ${question}`;
-    document.getElementById('questionAnswer').value = "";
-    document.getElementById('questionModal').style.display = 'block';
-}
-function submitAnswer() {
-    const playerAnswer = document.getElementById('questionAnswer').value.trim().toLowerCase();
-    document.getElementById('questionModal').style.display = 'none';
+    // Check if player is on start or end square
+    if (player.position === 0 || player.position === totalSquares - 1) {
+        alert(`${player.name} cannot be asked a question on this square.`);
+        currentPlayerIndex = (currentPlayerIndex + 1) % players.length; // Switch to the next player
+        updateCurrentTurnDisplay(); // Update current turn display
+        document.getElementById('rollButton').disabled = false; // Re-enable roll button
+        return; // Exit function early
+    }
 
-    const player = players[currentPlayerIndex];
+    let questionIndex = Math.floor(Math.random() * questions.length);
+    let answer = prompt(`${player.name}, answer this question: ${questions[questionIndex][0]}`);
 
-    if (playerAnswer === currentQuestionAnswer.toLowerCase()) {
+    // Check if the answer is correct
+    if (answer.toLowerCase() === questions[questionIndex][1].toLowerCase()) {
         alert(`${player.name} answered correctly!`);
         player.correctAnswersInRow++;
     } else {
         alert(`${player.name} answered incorrectly.`);
-        moveBackward(currentPlayerIndex);
-        player.correctAnswersInRow = 0;
-        return;
+        moveBackward(playerIndex); // Move player back 3 spaces
+        player.correctAnswersInRow = 0; // Reset correct answers
+        return; // Return early to avoid switching player turn
     }
 
     if (player.correctAnswersInRow === 3) {
-        alert(`${player.name} answered 3 questions in a row correctly! Extra roll!`);
-        rollForCurrentPlayer();
+        alert(`${player.name} has answered 3 questions in a row correctly! They get an extra roll!`);
+        rollForCurrentPlayer(); // Call to roll the dice again
     } else {
-        // Switch to the next player
-        currentPlayerIndex = (currentPlayerIndex + 1) % players.length;
-        updateCurrentTurnDisplay();
-        document.getElementById('rollButton').disabled = false;
+        // Move to the next player
+        currentPlayerIndex = (currentPlayerIndex + 1) % players.length; // Move to the next player
+        updateCurrentTurnDisplay(); // Update current turn display
+        document.getElementById('rollButton').disabled = false; // Re-enable roll button
     }
 }
     
@@ -361,7 +364,7 @@ function doY(playerIndex) {
 }
 
 function doZ(playerIndex) {
-    let challenge = challenges[parseInt(Math.random()*(challenges.length))]
+    let challenge = challenges[(Math.random()*challenges.length)+1]
     let player = players[playerIndex];
     if(player.challengesToComplete==""){
         player.challengesToComplete.concat(challenge)
