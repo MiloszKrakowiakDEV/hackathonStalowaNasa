@@ -191,6 +191,10 @@ footer p{
     margin-bottom: 10px;
 }
 
+.lesson-plans-title{
+    user-select: none;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .banner {
