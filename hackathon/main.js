@@ -14,13 +14,13 @@ const challenges = [
 ];
 // Updated to a 2D array with questions and answers
 const questions = [
-    ["Is the sky blue?", "yes"],
-    ["Is water wet?", "yes"],
-    ["Does 2 + 2 equal 4?", "yes"],
-    ["Is the earth round?", "yes"],
-    ["Can you touch your toes?", "yes"],
-    ["Is fire hot?", "yes"],
-    ["Is ice cold?", "yes"]
+    ["Is Goal 1 related to worldwide poverty issue?", "yes"],
+    ["Are nitrogen fertilizers good for soil health?", "no"],
+    ["Is CARITAS a charity organization?", "yes"],
+    ["Did climate change led to reduction of natural resources?", "no"],
+    ["Is solar energy a renewable resource?", "yes"],
+    ["Are fossil fuels a renewable resource?", "no"],
+    ["Can soil ouality affect your health?", "yes"]
 ];
 
 let currentPlayerIndex = 0;
