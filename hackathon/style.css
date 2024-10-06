@@ -283,26 +283,4 @@ body {
         .modal button {
             margin-top: 10px;
         }
-        #questionModal button, #namePopup button{
-            background-color: #007BFF;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.1em;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        #questionModal button:hover, #namePopup button:hover{
-            background-color: #0056b3;
-        }
-        #questionModal, #namePopup{
-            border-radius: 10px;
-        }
-        #questionModal input{
-            width: 60%;
-        }
-        #questionModal input:hover, #namePopup input:hover{
-            border-color: #007BFF;
-        }
         

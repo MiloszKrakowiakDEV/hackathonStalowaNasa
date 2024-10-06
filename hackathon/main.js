@@ -4,6 +4,7 @@ let players = [
     { name: "Player 3", position: 0, correctAnswersInRow: 0, className: 'player3', currentMoney: 0, challengesToComplete: "" },
     { name: "Player 4", position: 0, correctAnswersInRow: 0, className: 'player4', currentMoney: 0, challengesToComplete: "" }
 ];
+let currentQuestionAnswer;
 const challenges = [
     'a',
     'b',
@@ -267,39 +268,38 @@ function moveBackward(playerIndex) {
 
 
 function askQuestion(playerIndex) {
-    let player = players[playerIndex];
+    const questionIndex = Math.floor(Math.random() * questions.length);
+    const [question, answer] = questions[questionIndex];
+    currentQuestionAnswer = answer;
 
-    // Check if player is on start or end square
-    if (player.position === 0 || player.position === totalSquares - 1) {
-        alert(`${player.name} cannot be asked a question on this square.`);
-        currentPlayerIndex = (currentPlayerIndex + 1) % players.length; // Switch to the next player
-        updateCurrentTurnDisplay(); // Update current turn display
-        document.getElementById('rollButton').disabled = false; // Re-enable roll button
-        return; // Exit function early
-    }
+    document.getElementById('questionText').textContent = `${players[playerIndex].name}, answer this question:\n ${question}`;
+    document.getElementById('questionAnswer').value = "";
+    document.getElementById('questionModal').style.display = 'block';
+}
+function submitAnswer() {
+    const playerAnswer = document.getElementById('questionAnswer').value.trim().toLowerCase();
+    document.getElementById('questionModal').style.display = 'none';
 
-    let questionIndex = Math.floor(Math.random() * questions.length);
-    let answer = prompt(`${player.name}, answer this question: ${questions[questionIndex][0]}`);
+    const player = players[currentPlayerIndex];
 
-    // Check if the answer is correct
-    if (answer.toLowerCase() === questions[questionIndex][1].toLowerCase()) {
+    if (playerAnswer === currentQuestionAnswer.toLowerCase()) {
         alert(`${player.name} answered correctly!`);
         player.correctAnswersInRow++;
     } else {
         alert(`${player.name} answered incorrectly.`);
-        moveBackward(playerIndex); // Move player back 3 spaces
-        player.correctAnswersInRow = 0; // Reset correct answers
-        return; // Return early to avoid switching player turn
+        moveBackward(currentPlayerIndex);
+        player.correctAnswersInRow = 0;
+        return;
     }
 
     if (player.correctAnswersInRow === 3) {
-        alert(`${player.name} has answered 3 questions in a row correctly! They get an extra roll!`);
-        rollForCurrentPlayer(); // Call to roll the dice again
+        alert(`${player.name} answered 3 questions in a row correctly! Extra roll!`);
+        rollForCurrentPlayer();
     } else {
-        // Move to the next player
-        currentPlayerIndex = (currentPlayerIndex + 1) % players.length; // Move to the next player
-        updateCurrentTurnDisplay(); // Update current turn display
-        document.getElementById('rollButton').disabled = false; // Re-enable roll button
+        // Switch to the next player
+        currentPlayerIndex = (currentPlayerIndex + 1) % players.length;
+        updateCurrentTurnDisplay();
+        document.getElementById('rollButton').disabled = false;
     }
 }
     
@@ -364,7 +364,7 @@ function doY(playerIndex) {
 }
 
 function doZ(playerIndex) {
-    let challenge = challenges[(Math.random()*challenges.length)+1]
+    let challenge = challenges[parseInt(Math.random()*(challenges.length))]
     let player = players[playerIndex];
     if(player.challengesToComplete==""){
         player.challengesToComplete.concat(challenge)
