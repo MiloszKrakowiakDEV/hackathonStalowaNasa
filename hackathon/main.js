@@ -32,10 +32,7 @@ const squareTypes = [
     'bonus', 'bonus', 'bonus' // 3 bonus roll squares
 ];
 
-function updateCurrentTurnDisplay() {
-    const currentPlayerDisplay = document.getElementById('currentTurn');
-    currentPlayerDisplay.textContent = `${players[currentPlayerIndex].name}'s turn to roll!`;
-}
+
 
 // Function to shuffle an array
 function shuffle(array) {
@@ -331,7 +328,10 @@ function announceWinners() {
     document.querySelector('.podium').style.display = 'flex'; // Show podium
     document.getElementById('currentTurn').textContent = "";
 }
-
+function updateCurrentTurnDisplay() {
+    const currentPlayerDisplay = document.getElementById('currentTurn');
+    currentPlayerDisplay.textContent = `${players[currentPlayerIndex].name}'s turn to roll!`;
+}
 
 function renderBoard() {
     const boardSquares = document.querySelectorAll('.game-square');
