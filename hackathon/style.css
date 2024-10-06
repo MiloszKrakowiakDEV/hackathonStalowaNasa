@@ -27,7 +27,6 @@ body {
             color: white;
             text-align: center;
             z-index: 1000;
-            font-family: 'Times New Roman', Times, serif;
             
         }
         
@@ -266,5 +265,22 @@ body {
             pointer-events: none; /* Disable interactions with the rest of the page initially */
             opacity: 0.5;
           }
-
-          
+          .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            border: 2px solid black;
+            padding: 20px;
+            z-index: 1000;
+        }
+        .modal input {
+            margin-top: 10px;
+            display: block;
+        }
+        .modal button {
+            margin-top: 10px;
+        }
+        

@@ -5,8 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Board Game Website</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="\img/icon3.png">
 </head>
 <body>
+    <div id="questionModal" class="modal">
+        <h3 id="questionText"></h3>
+        <input type="text" id="questionAnswer" placeholder="Your answer here">
+        <button onclick="submitAnswer()">Submit</button>
+    </div>
     <div id="namePopup">
         <h2>Enter Player Names</h2>
         <label for="player1">Player 1:</label>
