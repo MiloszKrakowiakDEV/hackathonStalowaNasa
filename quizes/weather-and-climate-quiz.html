@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather and Climate - SDG 13</title>
+    <link rel="stylesheet" href="../style.css"> <!-- Link to your CSS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Link to jQuery -->
+</head>
+<body>
+    <header>
+        <div class="banner">Weather and Climate - SDG 13</div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../educational-materials.html">Educational Materials</a></li>
+                <li><a href="../about.html">About us</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <br>
+    <main>
+        <section class="page-section">
+            <center><h1>Interactive Quiz</h1>
+            <h4>Test your knowledge about weather, climate, and climate action!</h4>
+            <h5>Not sure about your knowledge? You can learn more about the topic <a href="../geography/weather-and-climate.html">over here!</a></h5><br>
+            <button id="start-quiz-btn">Start Quiz</button></center>
+            <div id="quiz" style="display: none;">
+                <div id="timer" style="font-weight: bold;">Time left: <span id="time">60</span> seconds</div>
+                <div class="quiz">
+                    <p><strong>1. What gas is the primary contributor to climate change?</strong></p>
+                    <ul>
+                        <li><input type="radio" name="q1" value="a"> Carbon Dioxide (CO₂)</li>
+                        <li><input type="radio" name="q1" value="b"> Oxygen (O₂)</li>
+                        <li><input type="radio" name="q1" value="c"> Nitrogen (N₂)</li>
+                    </ul>
+
+                    <p><strong>2. Which international agreement aims to limit global warming?</strong></p>
+                    <ul>
+                        <li><input type="radio" name="q2" value="a"> Kyoto Protocol</li>
+                        <li><input type="radio" name="q2" value="b"> Paris Agreement</li>
+                        <li><input type="radio" name="q2" value="c"> Montreal Protocol</li>
+                    </ul>
+
+                    <p><strong>3. What phenomenon occurs due to rising sea levels?</strong></p>
+                    <ul>
+                        <li><input type="radio" name="q3" value="a"> Flooding</li>
+                        <li><input type="radio" name="q3" value="b"> Drought</li>
+                        <li><input type="radio" name="q3" value="c"> Tornadoes</li>
+                    </ul>
+
+                    <p><strong>4. Which of the following is a renewable energy source?</strong></p>
+                    <ul>
+                        <li><input type="radio" name="q4" value="a"> Solar Energy</li>
+                        <li><input type="radio" name="q4" value="b"> Natural Gas</li>
+                        <li><input type="radio" name="q4" value="c"> Coal</li>
+                    </ul>
+
+                    <p><strong>5. What is a major effect of climate change on agriculture?</strong></p>
+                    <ul>
+                        <li><input type="radio" name="q5" value="a"> Increased crop yields</li>
+                        <li><input type="radio" name="q5" value="b"> Water scarcity</li>
+                        <li><input type="radio" name="q5" value="c"> Stable weather conditions</li>
+                    </ul>
+
+                    <button id="submit-quiz-btn" onclick="checkAnswers()" disabled>Submit Quiz</button>
+                    <p id="quiz-result" style="margin-top: 10px; font-weight: bold;"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Global Warming and Climate Change - Educational Materials. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        let timer;
+        let timeLeft = 60; // 2 minutes
+        const startQuizBtn = document.getElementById('start-quiz-btn');
+        const quizSection = document.getElementById('quiz');
+        const submitQuizBtn = document.getElementById('submit-quiz-btn');
+        const timeDisplay = document.getElementById('time');
+
+        startQuizBtn.addEventListener('click', function() {
+            quizSection.style.display = 'block';
+            startQuizBtn.disabled = true; // Disable the start button
+            startTimer();
+            submitQuizBtn.disabled = false; // Enable the submit button
+        });
+
+        function startTimer() {
+            timer = setInterval(function() {
+                if (timeLeft > 0) {
+                    timeLeft--;
+                    timeDisplay.textContent = timeLeft;
+                } else {
+                    clearInterval(timer);
+                    submitQuizBtn.disabled = true; // Disable submit button when time's up
+                    document.querySelectorAll('input[type="radio"]').forEach(input => {
+                        input.disabled = true; // Disable all radio buttons
+                    });
+                    showCorrectAnswers();
+                }
+            }, 1000);
+        }
+
+        function checkAnswers() {
+            clearInterval(timer); // Stop the timer when submitting
+            let score = 0;
+            const totalQuestions = 5;
+
+            const answers = {
+                q1: 'a',
+                q2: 'b',
+                q3: 'a',
+                q4: 'a',
+                q5: 'b'
+            };
+
+            for (let i = 1; i <= totalQuestions; i++) {
+                const selected = document.querySelector(`input[name="q${i}"]:checked`);
+                const correctAnswer = answers[`q${i}`];
+
+                if (selected) {
+                    if (selected.value === correctAnswer) {
+                        score++;
+                        selected.parentNode.style.color = "green";
+                        selected.parentNode.appendChild(document.createTextNode(" (Correct)"));
+                    } else {
+                        selected.parentNode.style.color = "red";
+                        selected.parentNode.appendChild(document.createTextNode(` (Incorrect: ${correctAnswer})`));
+                    }
+                } else {
+                    // Mark unanswered questions as incorrect and show the correct answer
+                    const correctInput = document.querySelector(`input[name="q${i}"][value="${correctAnswer}"]`);
+                    if (correctInput) {
+                        correctInput.parentNode.style.color = "red"; // Mark the correct answer in red
+                        correctInput.parentNode.appendChild(document.createTextNode(` (Incorrect: ${correctAnswer})`));
+                    }
+                }
+            }
+
+            const resultMessage = `You scored ${score} out of ${totalQuestions}.`;
+            document.getElementById('quiz-result').textContent = resultMessage;
+            submitQuizBtn.disabled = true; // Disable submit button after submission
+        }
+
+        function showCorrectAnswers() {
+            const answers = {
+                q1: 'a',
+                q2: 'b',
+                q3: 'a',
+                q4: 'a',
+                q5: 'b'
+            };
+
+            for (let i = 1; i <= 5; i++) {
+                const correctAnswer = answers[`q${i}`];
+                const correctInput = document.querySelector(`input[name="q${i}"][value="${correctAnswer}"]`);
+                if (correctInput) {
+                    correctInput.parentNode.style.color = "red"; // Correct answer in red
+                    correctInput.parentNode.appendChild(document.createTextNode(` (Incorrect: ${correctAnswer})`));
+                }
+            }
+        }
+
+        $(document).ready(function() {
+            $('#lesson-plans-title').click(function() {
+                $('#lesson-plan').toggle(); // Toggle the visibility of the lesson plan
+            });
+        });
+        
+    </script>
+</body>
+</html>
