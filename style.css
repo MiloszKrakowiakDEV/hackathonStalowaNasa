@@ -82,9 +82,32 @@ main {
     overflow: hidden;
 }
 
-.page-section:hover {
+.page-section:hover, .page-section-questions:hover{
     transform: translateY(-5px); /* Lift effect on hover */
 }
+
+.page-section-questions{
+    color: #fff;
+    position: relative;
+    margin: 20px auto; /* Space between sections */
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #007BFF; /* White background for sections */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s; /* Smooth transition on hover */
+    overflow: hidden;
+}
+
+.page-section-questions h2{
+    border-bottom: 2px solid #fff; /* Underline for subheadings */
+    padding-bottom: 5px;
+}
+
+.page-section-questions h2{
+    color: #fff;
+    margin: 10px 0; /* Reduced margin */
+}
+
 
 h1, h2 {
     color: #333;
