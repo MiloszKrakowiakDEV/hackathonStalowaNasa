@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - SDGs EDU</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS -->
+    <script defer src="search.js"></script> <!-- Link to JS file for search -->
+    <link rel="icon" type="image/x-icon" href="img/icon3.png">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Link to jQuery -->
+</head>
+<body>
+    <header>
+        <div class="banner">Quizes</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="educational-materials.html">Educational Materials</a></li>
+                <li><a href="about.html">About us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <br>
+    <main>
+        <section class="page-section">
+            <h1>Welcome to the Quizes Page</h1>
+            <p>This page lets you test your knowledge about SDGs Goals using various quizes</p>
+        </section>
+
+        <!-- Search Section -->
+        <section id="search-section" class="page-section">
+            <h2>Search by Subject</h2>
+            <input type="text" id="search-input" placeholder="Search topics by subject...">
+        </section>
+
+        <!-- Biology Section -->
+        <section class="page-section">
+            <h2 class="lesson-plans-title" data-target="biology-plan">Biology Quizes (Click to View)</h2>
+            <div class="lesson-plan" id="biology-plan" style="display:none;">
+                <ul class="topics-list">
+                    <li><a href="quizes/soil-health-quiz.html">Soil Health</a></li>
+                    <li><a href="">Biodiversity and Ecosystems</a></li>
+                    <li><a href="">Sustainable Food Systems</a></li>
+                    <li><a href="">Impact of Climate Change on Ecosystems</a></li>
+                    <li><a href="">Forestry and Wildlife Management</a></li>
+                    <li><a href="">Genetic Diversity and Species Conservation</a></li>
+                    <li><a href="">Human Health and Ecosystem Services</a></li>
+                    <li><a href="">Ecological Restoration</a></li>
+                    <li><a href="">Invasive Species</a></li>
+                    <li><a href="">Microbial Ecology</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Chemistry Section -->
+        <section class="page-section">
+            <h2 class="lesson-plans-title" data-target="chemistry-plan">Chemistry Quizes (Click to View)</h2>
+            <div class="lesson-plan" id="chemistry-plan" style="display:none;">
+                <ul class="topics-list">
+                    <li><a href="quizes/geology-and-natural-resources-quiz.html">Geology and Natural Resources</a></li>
+                    <li><a href="">Water Quality and Management</a></li>
+                    <li><a href="">Air Quality and Health</a></li>
+                    <li><a href="">Renewable Energy Sources</a></li>
+                    <li><a href="">Sustainable Waste Management</a></li>
+                    <li><a href="">Green Chemistry</a></li>
+                    <li><a href="">Atmospheric Chemistry</a></li>
+                    <li><a href="">Environmental Chemistry</a></li>
+                    <li><a href="">Energy Storage Solutions</a></li>
+                    <li><a href="">Biochemical Cycles</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Physics Section -->
+        <section class="page-section">
+            <h2 class="lesson-plans-title" data-target="physics-plan">Physics Quizes (Click to View)</h2>
+            <div class="lesson-plan" id="physics-plan" style="display:none;">
+                <ul class="topics-list">
+                    <li><a href="quizes/weather-and-climate-quiz.html">Weather and Climate</a></li>
+                    <li><a href="">Renewable Energy Sources</a></li>
+                    <li><a href="">Sustainable Transportation</a></li>
+                    <li><a href="">Natural Disasters and Resilience</a></li>
+                    <li><a href="">Impact of Climate Change on Ecosystems</a></li>
+                    <li><a href="">Thermodynamics and Energy Efficiency</a></li>
+                    <li><a href="">Fluid Dynamics</a></li>
+                    <li><a href="">Electromagnetism and Renewable Energy</a></li>
+                    <li><a href="">Radiation and Climate</a></li>
+                    <li><a href="">Remote Sensing and Climate Monitoring</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Geography Section -->
+        <section class="page-section">
+            <h2 class="lesson-plans-title" data-target="geography-plan">Geography Quizes (Click to View)</h2>
+            <div class="lesson-plan" id="geography-plan" style="display:none;">
+                <ul class="topics-list">
+                    <li><a href="quizes/weather-and-climate-quiz.html">Weather and Climate</a></li>
+                    <li><a href="">Natural Disasters and Resilience</a></li>
+                    <li><a href="">Oceans and Coastal Ecosystems</a></li>
+                    <li><a href="">Sustainable Urban Development</a></li>
+                    <li><a href="">Forestry and Wildlife Management</a></li>
+                    <li><a href="">Geospatial Analysis and Remote Sensing</a></li>
+                    <li><a href="">Climate Change and Migration</a></li>
+                    <li><a href="">Sustainable Land Use Planning</a></li>
+                    <li><a href="">Water Resource Management</a></li>
+                    <li><a href="">Environmental Impact of Agriculture</a></li>
+                </ul>
+            </div>
+        </section>
+
+
+        <!-- <section id="topics" class="page-section">
+            <h2>Topics</h2>
+            <p>Below is a list of topics you can explore, along with their associated subjects:</p>
+            <ul id="topics-list">
+                <li data-labels="climate, weather, environment">
+                    <a href="weather-and-climate.html">1. Weather and Climate (SDG 13: Climate Action)</a> 
+                    <span class="label">Subjects: Weather, Climate, Environment</span>
+                </li>
+                <li data-labels="geology, natural resources, sustainability">
+                    <a href="geology-and-natural-resources.html">2. Geology and Natural Resources (SDG 12: Responsible Consumption and Production)</a> 
+                    <span class="label">Subjects: Geology, Natural Resources, Sustainability</span>
+                </li>
+                <li data-labels="soil, agriculture, environment">
+                    <a href="soil-health.html">3. Soil Health (SDG 2: Zero Hunger)</a> 
+                    <span class="label">Subjects: Soil, Agriculture, Environment</span>
+                </li>
+                <li data-labels="water, chemistry, biology">
+                    <a href="water-quality.html">4. Water Quality and Management (SDG 6: Clean Water and Sanitation)</a> 
+                    <span class="label">Subjects: Water, Chemistry, Biology</span>
+                </li>
+                <li data-labels="biodiversity, ecosystems, biology">
+                    <a href="biodiversity.html">5. Biodiversity and Ecosystems (SDG 14: Life Below Water, SDG 15: Life on Land)</a> 
+                    <span class="label">Subjects: Biodiversity, Ecosystems, Biology</span>
+                </li>
+                <li data-labels="energy, physics, environment">
+                    <a href="energy-sources.html">6. Renewable Energy Sources (SDG 7: Affordable and Clean Energy)</a> 
+                    <span class="label">Subjects: Energy, Physics, Environment</span>
+                </li>
+                <li data-labels="air, health, chemistry">
+                    <a href="air-quality.html">7. Air Quality and Health (SDG 3: Good Health and Well-being)</a> 
+                    <span class="label">Subjects: Air, Health, Chemistry</span>
+                </li>
+                <li data-labels="food, agriculture, biology">
+                    <a href="food-systems.html">8. Sustainable Food Systems (SDG 2: Zero Hunger)</a> 
+                    <span class="label">Subjects: Food, Agriculture, Biology</span>
+                </li>
+                <li data-labels="urban planning, sustainability, geography">
+                    <a href="sustainable-cities.html">9. Sustainable Urban Development (SDG 11: Sustainable Cities and Communities)</a> 
+                    <span class="label">Subjects: Urban Planning, Sustainability, Geography</span>
+                </li>
+                <li data-labels="climate change, ecosystems, environment">
+                    <a href="climate-change.html">10. Impact of Climate Change on Ecosystems (SDG 13: Climate Action)</a> 
+                    <span class="label">Subjects: Climate Change, Ecosystems, Environment</span>
+                </li>
+                <li data-labels="transportation, physics, sustainability">
+                    <a href="sustainable-transport.html">11. Sustainable Transportation (SDG 11: Sustainable Cities and Communities)</a> 
+                    <span class="label">Subjects: Transportation, Physics, Sustainability</span>
+                </li>
+                <li data-labels="disasters, geology, resilience">
+                    <a href="natural-disasters.html">12. Natural Disasters and Resilience (SDG 11: Sustainable Cities and Communities)</a> 
+                    <span class="label">Subjects: Disasters, Geology, Resilience</span>
+                </li>
+                <li data-labels="oceans, climate, biodiversity">
+                    <a href="oceans-and-coastal-ecosystems.html">13. Oceans and Coastal Ecosystems (SDG 14: Life Below Water)</a> 
+                    <span class="label">Subjects: Oceans, Climate, Biodiversity</span>
+                </li>
+                <li data-labels="forestry, wildlife, biology">
+                    <a href="forestry-and-wildlife.html">14. Forestry and Wildlife Management (SDG 15: Life on Land)</a> 
+                    <span class="label">Subjects: Forestry, Wildlife, Biology</span>
+                </li>
+                <li data-labels="waste management, sustainability, environment">
+                    <a href="waste-management.html">15. Sustainable Waste Management (SDG 12: Responsible Consumption and Production)</a> 
+                    <span class="label">Subjects: Waste Management, Sustainability, Environment</span>
+                </li>
+            </ul>
+        </section> -->
+    </main>
+
+    <footer>
+        <p>&copy; 2024 SDGs EDU. All Rights Reserved.</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const searchInput = document.getElementById('search-input');
+        const topicsList = document.getElementById('topics-list');
+        const topics = topicsList.getElementsByTagName('li');
+
+        searchInput.addEventListener('keyup', function() {
+            const filter = searchInput.value.toLowerCase();
+            for (let i = 0; i < topics.length; i++) {
+                let topic = topics[i];
+                let labels = topic.getAttribute('data-labels').toLowerCase();
+                if (labels.includes(filter)) {
+                    topic.style.display = "";
+                } else {
+                    topic.style.display = "none";
+                }
+            }
+        });
+    });
+
+    $(document).ready(function() {
+        $('.lesson-plans-title').click(function() {
+            var target = $(this).data('target'); // Get the target lesson plan using the data attribute
+            $('#' + target).toggle(); // Toggle the visibility of the specific lesson plan
+
+            // Optionally, hide other lesson plans if you want to display only one at a time
+            $('.lesson-plan').not('#' + target).hide();
+        });
+    });
+
+    </script>
+</body>
+</html>
